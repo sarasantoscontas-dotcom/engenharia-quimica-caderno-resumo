@@ -7,12 +7,12 @@
   {
     "path": "404.html",
     "bytes": 73154,
-    "sha256": "efa0e3bb04022b4958a33e428395cd7838fcfa00013fab3748838da85fcf547b"
+    "sha256": "5b43bcff6f6a0d01ea9ee7bf70e4af615695292d1ea36dd307235203b01dd980"
   },
   {
     "path": "README.md",
     "bytes": 4010,
-    "sha256": "b751b601e4137489d1a3a2b7fc1b6041f9765d11ff925b0b1ffe7242d57943bd"
+    "sha256": "cbb82e3a15054739277938c7321214b5883e234ffa8a328fb390286caf7be5f2"
   },
   {
     "path": "_redirects",
@@ -27,7 +27,7 @@
   {
     "path": "assets/config.json",
     "bytes": 104,
-    "sha256": "2e9fff612fe0fa5b9a58497221a03314985f722cb51628c1c4175573104882c8"
+    "sha256": "ea952b1c05c8ea441565931a04982430cdc636abd117169703c167261a5dfeba"
   },
   {
     "path": "assets/content.json",
@@ -37,7 +37,7 @@
   {
     "path": "assets/presentation.json",
     "bytes": 15634,
-    "sha256": "53f9020abd1baac139ad952f86c420353c68fd58f51c802e115209763daa16b9"
+    "sha256": "cc196689fa55fba00d17414fc4e87bec6777266dc9b62afeda67802d870e9865"
   },
   {
     "path": "assets/style.css",
@@ -47,7 +47,7 @@
   {
     "path": "index.html",
     "bytes": 73154,
-    "sha256": "efa0e3bb04022b4958a33e428395cd7838fcfa00013fab3748838da85fcf547b"
+    "sha256": "5b43bcff6f6a0d01ea9ee7bf70e4af615695292d1ea36dd307235203b01dd980"
   },
   {
     "path": "package.json",
