@@ -22,7 +22,7 @@ Semana, telas, planos de atividade e situações de aplicação são exemplos di
 
 ## Compra
 
-Preço exibido: R$ 69,99, em pagamento único, seguindo o modelo solicitado. Checkout próprio: `https://pay.cakto.com.br/avxtje2`. O link está em `assets/config.json` e nos botões estáticos de `index.html` e `404.html`, com abertura em nova aba. Os botões mantêm texto branco sobre fundo de destaque. Não há taxa adicional presumida na página. Alterar a configuração do site não modifica condições na plataforma de pagamento.
+Preço exibido: R$ 49,99, em pagamento único, seguindo o modelo solicitado. Checkout próprio: `https://pay.cakto.com.br/avxtje2`. O link está em `assets/config.json` e nos botões estáticos de `index.html` e `404.html`, com abertura em nova aba. Os botões mantêm texto branco sobre fundo de destaque. Não há taxa adicional presumida na página. Alterar a configuração do site não modifica condições na plataforma de pagamento.
 
 O único redirecionamento externo clicável é o checkout. A navegação interna usa âncoras. E-mail de suporte em texto, sem mailto.
 
