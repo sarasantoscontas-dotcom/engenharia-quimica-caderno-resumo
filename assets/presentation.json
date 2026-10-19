@@ -1,0 +1,409 @@
+{
+  "overview": [
+    [
+      "Resumos por disciplina",
+      "Conceitos, hipóteses, equações e exemplos aplicados aos processos.",
+      "resumos",
+      "Σ"
+    ],
+    [
+      "Flashcards de revisão",
+      "Perguntas para recuperar ideias e conferir a interpretação dos modelos.",
+      "flashcards",
+      "↻"
+    ],
+    [
+      "Agenda acadêmica",
+      "Aulas, avaliações, relatórios e estágio em uma semana preenchida.",
+      "agenda",
+      "▦"
+    ],
+    [
+      "Laboratório e ferramentas",
+      "Registro experimental, análise de dados e cálculos didáticos.",
+      "laboratorio",
+      "Δ"
+    ],
+    [
+      "TCC e pesquisa",
+      "Problema, fontes, método, orientação e escrita em etapas claras.",
+      "pesquisa",
+      "∇"
+    ],
+    [
+      "Formação e monitoria",
+      "Graduação, atividades de ensino, projetos e continuidade da formação.",
+      "grade",
+      "✎"
+    ]
+  ],
+  "week": [
+    {
+      "day": "Segunda",
+      "date": "09/11",
+      "focus": "Conectar aula e resolução",
+      "events": [
+        [
+          "08h–10h",
+          "Balanços de massa e energia",
+          "Definir fronteiras, base de cálculo e correntes do processo.",
+          "blue"
+        ],
+        [
+          "14h–15h",
+          "Revisão de termodinâmica",
+          "Retomar propriedades, estados e hipóteses de equilíbrio.",
+          "lilac"
+        ],
+        [
+          "17h–17h30",
+          "Começar o relatório",
+          "Separar roteiro, dados e objetivo da prática de escoamento.",
+          "yellow"
+        ]
+      ],
+      "explanation": "A aula e a revisão têm objetivos próprios: uma desenvolve a representação do processo, a outra retoma a base para interpretar propriedades. O relatório começa pela organização dos registros, antes da redação final.",
+      "next": "Ao encerrar o dia, confira a base de composição e registre a dúvida que ainda impede o fechamento do balanço. Deixe os dados do experimento identificados para a análise seguinte."
+    },
+    {
+      "day": "Terça",
+      "date": "10/11",
+      "focus": "Levar perguntas à prática",
+      "events": [
+        [
+          "08h–12h",
+          "Estágio acompanhado",
+          "Registrar atividade, conceito relacionado e feedback da supervisão.",
+          "mint"
+        ],
+        [
+          "14h–15h",
+          "Cinética e reatores",
+          "Comparar os modelos ideais de CSTR e PFR.",
+          "blue"
+        ],
+        [
+          "18h–18h30",
+          "Diário de estágio",
+          "Organizar o aprendizado e o próximo ponto de desenvolvimento.",
+          "peach"
+        ]
+      ],
+      "explanation": "O estágio ocupa um bloco importante da rotina. Registrar a experiência depois da atividade permite separar o que foi observado, o que foi compreendido e o que precisa de uma conversa com a supervisão.",
+      "next": "Na revisão de reatores, mantenha a mesma alimentação e conversão para comparar modelos. Uma diferença de hipótese pode explicar uma diferença no resultado."
+    },
+    {
+      "day": "Quarta",
+      "date": "11/11",
+      "focus": "Medir, analisar e comunicar",
+      "events": [
+        [
+          "08h–10h",
+          "Laboratório de fluidos",
+          "Documentar vazão, pressões e condições de medição.",
+          "mint"
+        ],
+        [
+          "10h30–11h30",
+          "Seminário de processos",
+          "Apresentar o sistema, as fontes e as escolhas do modelo.",
+          "pink"
+        ],
+        [
+          "16h–17h",
+          "Gráficos e discussão",
+          "Conferir unidades e relacionar o comportamento dos dados ao modelo.",
+          "yellow"
+        ]
+      ],
+      "explanation": "A coleta pede rastreabilidade; o seminário exige clareza de argumento; o relatório conecta os resultados à pergunta inicial. O plano reserva tempo para cada uma dessas exigências.",
+      "next": "Termine o bloco de análise com um avanço verificável: tabela conferida, gráfico identificado ou interpretação revisada. Preserve as discrepâncias relevantes para a discussão."
+    },
+    {
+      "day": "Quinta",
+      "date": "12/11",
+      "focus": "Concluir a entrega e revisar",
+      "events": [
+        [
+          "08h–10h",
+          "Operações unitárias",
+          "Rever balanços de coluna e condições da separação.",
+          "blue"
+        ],
+        [
+          "Até 18h",
+          "Entregar o relatório",
+          "Revisar cálculos, figuras, discussão e referências.",
+          "yellow"
+        ],
+        [
+          "19h–19h45",
+          "Revisão para a prova",
+          "Retomar erros anteriores e justificar as hipóteses dos exercícios.",
+          "lilac"
+        ]
+      ],
+      "explanation": "O fechamento do relatório inclui a conferência do arquivo e do atendimento ao enunciado. A revisão da noite usa as dúvidas identificadas durante a semana para escolher o que retomar.",
+      "next": "Confira se consegue explicar a relação entre composição, vazão e balanços independentes. No relatório, cada figura deve ter uma função na análise."
+    },
+    {
+      "day": "Sexta",
+      "date": "13/11",
+      "focus": "Avaliar e preparar a continuidade",
+      "events": [
+        [
+          "09h–10h30",
+          "Prova de operações unitárias",
+          "Balanços, interpretação de separações e hipóteses de modelagem.",
+          "pink"
+        ],
+        [
+          "14h–15h",
+          "Orientação de TCC",
+          "Apresentar o avanço da leitura e alinhar a próxima análise.",
+          "mint"
+        ],
+        [
+          "17h–17h30",
+          "Fechamento da semana",
+          "Conferir entregas, pendências e prioridades seguintes.",
+          "lilac"
+        ]
+      ],
+      "explanation": "Depois da avaliação, a formação continua com a orientação e a revisão do planejamento. A reunião pede registros do que foi estudado e das decisões que precisam ser tomadas.",
+      "next": "Antes de mover uma tarefa para a semana seguinte, identifique o motivo: faltou dado, referência, tempo ou compreensão de uma hipótese? O próximo passo depende dessa resposta."
+    }
+  ],
+  "agendaDetails": [
+    [
+      "Provas e seminários",
+      "Preparação antes da véspera.",
+      "A data final se conecta aos blocos de leitura, resolução, preparação de slides e revisão.",
+      [
+        "Seminário de processos · quarta",
+        "Conferir sistema, modelo e fontes",
+        "Prova de operações unitárias · sexta",
+        "Revisar balanços e condições de separação"
+      ]
+    ],
+    [
+      "Revisões e listas",
+      "O erro aponta o que precisa voltar.",
+      "Diferencie dificuldade conceitual, seleção de equação, conversão de unidade e cálculo.",
+      [
+        "Tentar resolver antes de consultar",
+        "Justificar as hipóteses",
+        "Conferir unidade e ordem de grandeza",
+        "Registrar a dúvida para a monitoria"
+      ]
+    ],
+    [
+      "Relatórios e prazos",
+      "Uma entrega em etapas menores.",
+      "A análise acompanha o registro do experimento, a organização dos dados e a discussão.",
+      [
+        "Segunda · reunir roteiro e dados",
+        "Quarta · revisar gráficos e interpretação",
+        "Quinta · conferir o arquivo final",
+        "Até 18h · realizar a entrega"
+      ]
+    ]
+  ],
+  "periods": [
+    [
+      "Início do curso",
+      "Construir a linguagem do cálculo",
+      "Cálculo · Álgebra · Química · Física",
+      "Relacione grandezas, unidades e representações aos problemas que serão estudados."
+    ],
+    [
+      "Consolidar a base",
+      "Descrever sistemas e propriedades",
+      "Química · Métodos · Balanços",
+      "Organize bases de cálculo, equações e hipóteses antes da substituição numérica."
+    ],
+    [
+      "Conectar as grandezas",
+      "Compreender energia e escoamento",
+      "Termodinâmica · Fluidos · Matemática",
+      "Relacione propriedades, regime e condições do modelo ao processo analisado."
+    ],
+    [
+      "Ampliar os mecanismos",
+      "Estudar os fenômenos de transporte",
+      "Calor · Massa · Quantidade de movimento",
+      "Identifique forças motrizes, resistências e domínios de validade das relações."
+    ],
+    [
+      "Integrar as operações",
+      "Analisar transformação e separação",
+      "Operações unitárias · Reatores",
+      "Conecte balanços, equilíbrio, transporte e cinética ao objetivo do equipamento."
+    ],
+    [
+      "Modelar e acompanhar",
+      "Estudar a resposta dos processos",
+      "Controle · Simulação · Laboratório",
+      "Documente parâmetros, métodos e comparação com dados e cálculos independentes."
+    ],
+    [
+      "Construir um trabalho",
+      "Desenvolver projeto e investigação",
+      "Projeto · Estágio · TCC",
+      "Organize pergunta, referências, análises e entregas do percurso acompanhado."
+    ],
+    [
+      "Planejar a continuidade",
+      "Reunir produção e próximos passos",
+      "Conclusão · Pesquisa · Carreira",
+      "Selecione experiências e projetos, confira documentos e planeje o aprofundamento."
+    ]
+  ],
+  "research": [
+    [
+      "Análise de processo",
+      "Modelos e hipóteses em comparação",
+      "Exemplo: comparar alternativas de separação sob critérios definidos.",
+      [
+        "Delimitar sistema e objetivo",
+        "Identificar fontes e parâmetros",
+        "Conferir balanços e hipóteses",
+        "Discutir resultados e limitações"
+      ]
+    ],
+    [
+      "Trabalho experimental",
+      "Dados e interpretação",
+      "Exemplo: investigar a relação entre vazão e queda de pressão.",
+      [
+        "Definir variáveis e procedimento",
+        "Preservar condições e dados brutos",
+        "Organizar tratamento e gráficos",
+        "Relacionar observações e modelo"
+      ]
+    ],
+    [
+      "Sustentabilidade e projeto",
+      "Comparar com uma base comum",
+      "Exemplo: avaliar consumo de energia em alternativas de processo.",
+      [
+        "Definir fronteira e base de comparação",
+        "Identificar entradas e qualidade dos dados",
+        "Analisar os indicadores escolhidos",
+        "Comunicar critérios e limites da conclusão"
+      ]
+    ]
+  ],
+  "benefits": [
+    [
+      "Conceito com contexto",
+      "As equações aparecem acompanhadas de hipóteses e interpretação para compreender seu uso."
+    ],
+    [
+      "Revisão ativa",
+      "Os cartões ajudam a recuperar ideias e reconhecer o que precisa de outra leitura."
+    ],
+    [
+      "Unidades no raciocínio",
+      "A conferência de grandezas acompanha a resolução antes de concluir o cálculo."
+    ],
+    [
+      "Mais clareza nas listas",
+      "Separe interpretação, modelagem e erro de operação para definir o próximo estudo."
+    ],
+    [
+      "Relatórios acompanhados",
+      "Preparação, dados, tratamento e discussão recebem atenção própria no planejamento."
+    ],
+    [
+      "Prazos com preparação",
+      "Divida trabalhos e apresentações em avanços distribuídos entre as aulas."
+    ],
+    [
+      "Pesquisa em etapas",
+      "Conecte pergunta, referências, método e escrita às próximas entregas."
+    ],
+    [
+      "Consulta no seu ritmo",
+      "Retome uma base matemática ou um tema de processo conforme a dúvida do momento."
+    ],
+    [
+      "Formação com identidade",
+      "Os exemplos tratam de balanços, fenômenos, experimentos, projetos e estágio."
+    ],
+    [
+      "Semana com sentido",
+      "Cada compromisso tem um objetivo de estudo e um resultado esperado."
+    ],
+    [
+      "Modelo e experimento juntos",
+      "Interprete dados em relação às condições e aproximações utilizadas."
+    ],
+    [
+      "Continuidade do percurso",
+      "Acompanhe projetos, monitoria, pesquisa e experiências como partes da formação."
+    ]
+  ],
+  "faq": [
+    [
+      "O que é o Caderno do Estudante de Engenharia Química?",
+      "É um caderno digital com conteúdos de estudo e ferramentas para organizar a graduação. Reúne resumos, flashcards, referências, anotações, planejamento, avaliações, laboratório, estágio e TCC."
+    ],
+    [
+      "Para quem o caderno é indicado?",
+      "Para estudantes de Engenharia Química que precisam revisar disciplinas, organizar listas e entregas e registrar experiências de laboratório, estágio e pesquisa."
+    ],
+    [
+      "Quais assuntos posso estudar?",
+      "Balanços de massa e energia, termodinâmica, fenômenos de transporte, operações unitárias, cinética e reatores, controle, métodos numéricos e outras matérias de fundamentos, processos, materiais e sustentabilidade."
+    ],
+    [
+      "Como os resumos ajudam no estudo?",
+      "Cada assunto reúne conceitos, equações, hipóteses, exemplo aplicado e cuidados de interpretação. Você pode retomar a base do problema e relacionar o resultado às condições do modelo."
+    ],
+    [
+      "Como funciona a revisão com flashcards?",
+      "Os cartões apresentam perguntas e respostas por matéria, com conceitos, aplicações e exemplos. No caderno, a marcação de aprendizado ajuda a acompanhar os conteúdos revisados."
+    ],
+    [
+      "Quais ferramentas de cálculo estão incluídas?",
+      "Calculadoras didáticas de mistura sem reação, Reynolds, carga térmica sensível e comparação de CSTR e PFR de primeira ordem, além de conversões de pressão, temperatura e vazão mássica. Cada resultado deve ser interpretado dentro das hipóteses da ferramenta."
+    ],
+    [
+      "O que posso organizar no planner e no calendário?",
+      "Aulas, blocos de estudo, revisões, provas, trabalhos, relatórios e etapas de projeto. Você pode acompanhar datas, metas e situação das atividades."
+    ],
+    [
+      "Como o caderno acompanha o laboratório?",
+      "A área reúne registros de experimentos, condições, resultados e observações, além de checklist de preparação. Esses dados ajudam a organizar a análise e o relatório da atividade."
+    ],
+    [
+      "Há recursos para estágio e formação profissional?",
+      "Sim. O caderno permite organizar registros de estágio e candidaturas e inclui espaços de visitas técnicas, projetos, eventos e portfólio acadêmico."
+    ],
+    [
+      "O que está incluído na parte de TCC e pesquisa?",
+      "Organização do tema, problema, objetivos, metodologia, escrita, orientação e checklist, além de recursos de leitura, fichamento, fontes e acompanhamento de projetos."
+    ],
+    [
+      "Há atividades para monitoria e ensino?",
+      "Sim. A apresentação inclui planos com objetivo, materiais, sequência e avaliação para revisão de fundamentos, oficinas e apoio às disciplinas."
+    ],
+    [
+      "Posso consultar pelo celular?",
+      "Sim. O layout é adaptado para celular, tablet e computador, com textos e cartões organizados para facilitar a consulta."
+    ],
+    [
+      "Qual é o valor do caderno?",
+      "O caderno custa R$ 69,99, em pagamento único. As formas e condições de pagamento estão disponíveis na página de compra."
+    ],
+    [
+      "Como recebo o acesso?",
+      "Após a confirmação do pagamento, as informações de acesso são enviadas ao e-mail informado no pedido."
+    ],
+    [
+      "Qual é o prazo para solicitar reembolso?",
+      "Você tem 7 dias para solicitar o reembolso. Para atendimento, utilize o e-mail de suporte informado nesta página e tenha os dados do pedido disponíveis."
+    ]
+  ]
+}

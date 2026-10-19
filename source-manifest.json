@@ -1,0 +1,77 @@
+[
+  {
+    "path": ".gitignore",
+    "bytes": 20,
+    "sha256": "58aea3d6b4b0f8799c1e00c3b023898516997f6369ee8e13d8d4b4215f70a62b"
+  },
+  {
+    "path": "404.html",
+    "bytes": 73153,
+    "sha256": "c70af0e02402a5348fa0e010af42660f68d81ec276a38e0cabf89494bc30e230"
+  },
+  {
+    "path": "README.md",
+    "bytes": 4009,
+    "sha256": "ed1d3e74495ced61fbc01b8a0c765566881c37e85a7fcf830f55f6d3d880a6a2"
+  },
+  {
+    "path": "_redirects",
+    "bytes": 19,
+    "sha256": "6036983e5fc00f0169c9e939b1816ed771eee00e27f2fcc517b819041460b9ef"
+  },
+  {
+    "path": "assets/app.js",
+    "bytes": 10268,
+    "sha256": "dd54c0b403bb814fc7768f3cc8a95bd6d66eb912d3cc09c23239f44c70abe45c"
+  },
+  {
+    "path": "assets/config.json",
+    "bytes": 103,
+    "sha256": "2932b452bb3cbe1c1558cc725b3ceb35a65cccf964e8ae6f98934a2d38de901a"
+  },
+  {
+    "path": "assets/content.json",
+    "bytes": 187596,
+    "sha256": "887f4eec7276cd9a51704abbfd1195922d6c1b5b9319a204a287dda8e3c57999"
+  },
+  {
+    "path": "assets/presentation.json",
+    "bytes": 15633,
+    "sha256": "9e098191e9c173f435d7ccc8e9265046e94210a0feb46e0f21f6509bdc37f670"
+  },
+  {
+    "path": "assets/style.css",
+    "bytes": 55220,
+    "sha256": "9387df5a088416dfd16505638c37e96ac82133a08a4f46c93de4af2ee6652a55"
+  },
+  {
+    "path": "index.html",
+    "bytes": 73153,
+    "sha256": "c70af0e02402a5348fa0e010af42660f68d81ec276a38e0cabf89494bc30e230"
+  },
+  {
+    "path": "package.json",
+    "bytes": 272,
+    "sha256": "693ce218e806987dbf5f8b70cfeea0e383731e689406aa56b5c1e173423675fa"
+  },
+  {
+    "path": "scripts/build.mjs",
+    "bytes": 335,
+    "sha256": "ad308b402d9713d8b7e07190a84aabc0ac33cd04a54772bf6444e1bec14a739f"
+  },
+  {
+    "path": "scripts/serve.mjs",
+    "bytes": 1132,
+    "sha256": "cc6f253d563b5fbd15ae1d6ffe80588ca897806d850df542b31587992adde10d"
+  },
+  {
+    "path": "scripts/verify.mjs",
+    "bytes": 2821,
+    "sha256": "cd8c40a054877fc54692108491b6dc8019bae9b61e855b13f2ea0bac14fd4b76"
+  },
+  {
+    "path": "vercel.json",
+    "bytes": 228,
+    "sha256": "75a76c2815d179039ad89ddb34c364a399cd7acdab941539b4ffc46037cab968"
+  }
+]

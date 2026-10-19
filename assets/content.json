@@ -1,0 +1,1924 @@
+{
+  "topics": [
+    {
+      "area": "Fundamentos de processos",
+      "title": "Balanços de Massa e Energia",
+      "lead": "A acumulação é igual à entrada menos a saída, mais a geração menos o consumo. Para massa total, geração e consumo são nulos mesmo quando ocorre reação química. Para uma espécie química, a reação altera esses termos. Regime permanente significa acumulação nula, mas não exige equilíbrio termodinâmico. Antes de calcular, desenhe a fronteira do sistema e identifique todas as correntes que a atravessam.",
+      "paragraphs": [
+        "Escolha uma base de cálculo que simplifique as frações fornecidas: 100 kg para porcentagens mássicas ou 100 mol para porcentagens molares. Fração mássica e fração molar não são intercambiáveis. Converta usando a massa molar de cada componente e confira se as frações somam um. Uma corrente de reciclo interna desaparece no balanço global da unidade, mas precisa aparecer no balanço de cada equipamento.",
+        "Para modelar um processo com reciclo, desenhe primeiro os equipamentos individualmente, marque cada corrente e escolha a fronteira global. Defina as incógnitas e conte somente balanços independentes e relações de composição. Uma purga é determinada pela necessidade de controlar componentes inertes ou impurezas que retornariam ao sistema; sua vazão deve ser calculada com o balanço da espécie acumulável, e não por um percentual arbitrário.",
+        "Em balanços com reação, a massa total se conserva, mas os mols de cada espécie são alterados pelos coeficientes estequiométricos. Especifique se a conversão é por passe no reator ou global em relação à alimentação fresca. Um cálculo com frações mássicas exige converter para mol antes de usar relações estequiométricas; a conversão inversa deve usar massas molares coerentes."
+      ],
+      "formula": "Acumulação = Entrada − Saída + Geração − Consumo",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Misturam-se 100 kg/h de solução a 20% em massa e 50 kg/h a 50%. A vazão de soluto é 20 + 25 = 45 kg/h; a mistura tem 150 kg/h e fração mássica 0,30. Não há geração de massa.",
+      "pitfall": "O balanço total é obtido pela soma dos balanços de massa das espécies; contá-lo novamente pode introduzir uma equação redundante e mascarar graus de liberdade.",
+      "cards": [
+        [
+          "Quando a acumulação pode ser eliminada?",
+          "Quando o sistema está em regime permanente em relação à grandeza balanceada."
+        ],
+        [
+          "Um evaporador recebe 240 kg/h a 10% de sólido não volátil e entrega concentrado a 30%. Qual é a vazão evaporada?",
+          "Entram 24 kg/h de sólido. Como não evapora sólido, o concentrado é 24/0,30=80 kg/h. Pelo balanço global, evaporam 160 kg/h. A água passa de 216 kg/h na entrada para 56 kg/h no concentrado e 160 kg/h no vapor."
+        ],
+        [
+          "Por que não é correto somar balanço total e todos os balanços de espécies como equações independentes?",
+          "O balanço total é obtido pela soma dos balanços de massa das espécies; contá-lo novamente pode introduzir uma equação redundante e mascarar graus de liberdade."
+        ],
+        [
+          "Qual relação organiza o estudo de balanços de massa e energia?",
+          "Acumulação = Entrada − Saída + Geração − Consumo"
+        ],
+        [
+          "Como aplicar balanços de massa e energia em um exemplo?",
+          "Misturam-se 100 kg/h de solução a 20% em massa e 50 kg/h a 50%. A vazão de soluto é 20 + 25 = 45 kg/h; a mistura tem 150 kg/h e fração mássica 0,30. Não há geração de massa."
+        ],
+        [
+          "O que considerar ao interpretar balanços de massa e energia?",
+          "O balanço total é obtido pela soma dos balanços de massa das espécies; contá-lo novamente pode introduzir uma equação redundante e mascarar graus de liberdade."
+        ]
+      ]
+    },
+    {
+      "area": "Fundamentos de processos",
+      "title": "Termodinâmica",
+      "lead": "A entalpia reúne energia interna e trabalho de escoamento. Em um volume de controle permanente, o calor e o trabalho de eixo modificam as vazões de entalpia e as parcelas de energia cinética e potencial. Declare a convenção de sinais antes de substituir valores: aqui Q é positivo quando entra no sistema e W é positivo quando o sistema realiza trabalho.",
+      "paragraphs": [
+        "A entropia de um sistema pode diminuir por transferência de calor, mas a geração interna de entropia não pode ser negativa. Em equilíbrio entre fases, a temperatura, a pressão e o potencial químico de cada componente são iguais. A lei de Raoult aproxima soluções líquidas ideais com vapor ideal em pressões adequadas; não deve ser aplicada automaticamente a misturas fortemente não ideais.",
+        "No balanço de energia de uma turbina ou compressor, a entalpia transportada pela corrente incorpora o trabalho de escoamento; calor e trabalho de eixo devem ser tratados conforme a convenção de sinais. Desprezar energia cinética só é aceitável se a variação de velocidade for pequena no problema. Para sistemas com mudança de fase, a entalpia deve refletir calor latente e referência de propriedades consistente.",
+        "Para misturas não ideais, relações de equilíbrio líquido-vapor podem exigir coeficientes de atividade na fase líquida e fugacidade na fase vapor. Mesmo ao usar pressão de saturação, verifique a temperatura e a validade dos parâmetros. Valores de propriedades devem representar o estado real; extrapolação de uma correlação fora de sua faixa pode gerar composição ou temperatura de bolha fisicamente impossíveis."
+      ],
+      "formula": "Q̇ − Ẇ = Σ saída ṁ(h + v²/2 + gz) − Σ entrada ṁ(h + v²/2 + gz)",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Um aquecedor sem trabalho de eixo aquece 2 kg/s de água de 20 a 50 °C. Com cp constante de 4,18 kJ/(kg·K), desprezando energia cinética e perdas, Q̇ = 250,8 kW.",
+      "pitfall": "A entalpia absoluta depende de um estado de referência arbitrário. Misturar convenções distintas altera artificialmente diferenças de entalpia e prejudica o fechamento de energia.",
+      "cards": [
+        [
+          "Por que se usa entalpia em sistemas abertos?",
+          "Porque ela inclui a energia interna e o trabalho de escoamento associado à entrada e à saída de massa."
+        ],
+        [
+          "Um aquecedor sem perdas eleva 3 kg/s de água de 25 a 45 °C, com cp=4,2 kJ/(kg·K). Qual a carga térmica?",
+          "Com variações cinética e potencial desprezíveis e cp constante, Q̇=ṁcpΔT=3×4,2×20=252 kW. O valor é positivo para calor fornecido ao fluido e não inclui mudança de fase."
+        ],
+        [
+          "Por que duas tabelas de entalpia não devem ser misturadas sem conferir referência?",
+          "A entalpia absoluta depende de um estado de referência arbitrário. Misturar convenções distintas altera artificialmente diferenças de entalpia e prejudica o fechamento de energia."
+        ],
+        [
+          "Qual relação organiza o estudo de termodinâmica?",
+          "Q̇ − Ẇ = Σ saída ṁ(h + v²/2 + gz) − Σ entrada ṁ(h + v²/2 + gz)"
+        ],
+        [
+          "Como aplicar termodinâmica em um exemplo?",
+          "Um aquecedor sem trabalho de eixo aquece 2 kg/s de água de 20 a 50 °C. Com cp constante de 4,18 kJ/(kg·K), desprezando energia cinética e perdas, Q̇ = 250,8 kW."
+        ],
+        [
+          "O que considerar ao interpretar termodinâmica?",
+          "A entalpia absoluta depende de um estado de referência arbitrário. Misturar convenções distintas altera artificialmente diferenças de entalpia e prejudica o fechamento de energia."
+        ]
+      ]
+    },
+    {
+      "area": "Fundamentos de processos",
+      "title": "Mecânica dos Fluidos",
+      "lead": "O número de Reynolds compara forças inerciais e viscosas. Para tubos circulares, usa velocidade média, diâmetro interno e viscosidade dinâmica na temperatura de operação. Em condições usuais, Re abaixo de aproximadamente 2300 sugere regime laminar; a região de transição depende de perturbações e da geometria. Não extrapole esses limites diretamente para outros escoamentos.",
+      "paragraphs": [
+        "A equação de Darcy–Weisbach expressa a perda distribuída em função do fator de atrito de Darcy, comprimento, diâmetro e velocidade. No regime laminar plenamente desenvolvido em tubo circular, fD = 64/Re. O fator de Fanning é quatro vezes menor que o de Darcy. Acessórios acrescentam perdas localizadas e devem ser considerados no dimensionamento de bombas.",
+        "A vazão operacional de uma bomba centrífuga é determinada pelo encontro da curva de bomba com a curva do sistema, que inclui diferença estática de cotas e perdas dependentes da vazão. A análise precisa verificar NPSH disponível em relação ao requerido e faixa de operação do fabricante. Aumentar a potência nominal da bomba sem revisar sucção, tubulação e regime não resolve necessariamente cavitação.",
+        "A perda distribuída por Darcy–Weisbach depende do fator de atrito de Darcy, não do de Fanning. Em regime laminar plenamente desenvolvido, f_D=64/Re; em turbulento, rugosidade relativa e Reynolds influenciam a escolha da correlação. A perda localizada, representada por K v²/(2g), deve ser incluída junto das perdas de trecho, com unidades de altura ou pressão coerentes."
+      ],
+      "formula": "Re = ρ v D / μ",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Para água com ρ = 1000 kg/m³, μ = 0,001 Pa·s, v = 1 m/s e D = 0,02 m, Re = 20.000. O escoamento é turbulento nas condições usuais de tubo.",
+      "pitfall": "O fator de Fanning equivale a um quarto do fator de Darcy; a perda calculada fica quatro vezes menor que a adequada para o mesmo escoamento e convenção.",
+      "cards": [
+        [
+          "Qual a relação entre os fatores de Darcy e Fanning?",
+          "O fator de Darcy é quatro vezes o fator de Fanning."
+        ],
+        [
+          "Um tubo tem L=20 m, D=0,05 m, v=2 m/s e f_D=0,02. Qual a perda distribuída de carga?",
+          "h_f=f_D(L/D)v²/(2g)=0,02×400×4/(19,62)≈1,63 m de fluido, para g=9,81 m/s². Isso não inclui cotas nem perdas localizadas."
+        ],
+        [
+          "Qual erro ocorre ao usar f de Fanning na fórmula de Darcy sem conversão?",
+          "O fator de Fanning equivale a um quarto do fator de Darcy; a perda calculada fica quatro vezes menor que a adequada para o mesmo escoamento e convenção."
+        ],
+        [
+          "Qual relação organiza o estudo de mecânica dos fluidos?",
+          "Re = ρ v D / μ"
+        ],
+        [
+          "Como aplicar mecânica dos fluidos em um exemplo?",
+          "Para água com ρ = 1000 kg/m³, μ = 0,001 Pa·s, v = 1 m/s e D = 0,02 m, Re = 20.000. O escoamento é turbulento nas condições usuais de tubo."
+        ],
+        [
+          "O que considerar ao interpretar mecânica dos fluidos?",
+          "O fator de Fanning equivale a um quarto do fator de Darcy; a perda calculada fica quatro vezes menor que a adequada para o mesmo escoamento e convenção."
+        ]
+      ]
+    },
+    {
+      "area": "Fundamentos de processos",
+      "title": "Transferência de Calor",
+      "lead": "A condução em parede plana unidimensional permanente com condutividade constante segue a lei de Fourier. A convecção é representada por um coeficiente h que depende do escoamento, da geometria e das propriedades do fluido. Em uma parede composta, somam-se as resistências em série; a área de referência precisa ser consistente.",
+      "paragraphs": [
+        "A taxa de transferência em um trocador pode ser escrita como U A ΔTml, com fator de correção quando a configuração exigir. A diferença média logarítmica usa diferenças entre temperaturas das duas correntes nas extremidades, respeitando o arranjo paralelo ou contracorrente. A incrustação adiciona resistência e reduz U; não confunda U com um coeficiente convectivo isolado.",
+        "O balanço térmico das correntes fornece a carga requerida, enquanto o dimensionamento por U A ΔTml exige conhecer o sentido do escoamento e a coerência da área de referência. Em contracorrente, diferenças terminais podem manter força motriz maior do que em paralelo, mas isso depende das temperaturas e do arranjo. Incrustação e perda de pressão impõem restrições separadas do balanço energético.",
+        "A rede de resistências para parede composta combina condução e convecção desde que as áreas e geometrias sejam tratadas corretamente. Para cilindros, a resistência de condução depende de ln(r2/r1), não de L/(kA) plano sem justificativa. Em aquecimento transitório, o número de Biot ajuda a avaliar a uniformidade aproximada da temperatura interna, e o tempo característico depende de massa, calor específico e troca externa."
+      ],
+      "formula": "Q̇ = ΔT / Rtotal; Rparede = L/(kA); Rconvecção = 1/(hA)",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Uma parede com L = 0,10 m, k = 0,5 W/(m·K), A = 2 m² e diferença de 20 K conduz 200 W, sem resistências convectivas.",
+      "pitfall": "É necessário também o coeficiente global U e uma força motriz térmica representativa, além de fator de correção e verificações hidráulicas quando aplicáveis.",
+      "cards": [
+        [
+          "Por que a incrustação reduz a troca térmica?",
+          "Ela acrescenta resistência térmica e diminui o coeficiente global de transferência de calor."
+        ],
+        [
+          "Uma parede de 0,20 m² tem h interno=100 e externo=50 W/(m²·K), sem resistência de parede. Qual U na mesma área?",
+          "Como resistências convectivas estão em série, 1/U=1/100+1/50=0,03 m²K/W e U≈33,3 W/(m²·K). A condução e incrustação, se presentes, reduzirão U."
+        ],
+        [
+          "Por que não é possível inferir a área de trocador apenas pela carga Q?",
+          "É necessário também o coeficiente global U e uma força motriz térmica representativa, além de fator de correção e verificações hidráulicas quando aplicáveis."
+        ],
+        [
+          "Qual relação organiza o estudo de transferência de calor?",
+          "Q̇ = ΔT / Rtotal; Rparede = L/(kA); Rconvecção = 1/(hA)"
+        ],
+        [
+          "Como aplicar transferência de calor em um exemplo?",
+          "Uma parede com L = 0,10 m, k = 0,5 W/(m·K), A = 2 m² e diferença de 20 K conduz 200 W, sem resistências convectivas."
+        ],
+        [
+          "O que considerar ao interpretar transferência de calor?",
+          "É necessário também o coeficiente global U e uma força motriz térmica representativa, além de fator de correção e verificações hidráulicas quando aplicáveis."
+        ]
+      ]
+    },
+    {
+      "area": "Fundamentos de processos",
+      "title": "Transferência de Massa",
+      "lead": "Em uma dimensão, a difusão molecular relativa à velocidade molar média é proporcional ao gradiente de concentração. O fluxo difusivo não é necessariamente igual ao fluxo total, que também contém transporte convectivo. Em misturas binárias com contradifusão equimolar, o fluxo molar total é nulo e os fluxos dos componentes têm módulos iguais e sinais opostos.",
+      "paragraphs": [
+        "Na teoria dos dois filmes, resistências de transferência existem em ambos os lados da interface. As concentrações interfaciais são relacionadas por uma condição de equilíbrio, enquanto as concentrações no seio das fases definem as forças motrizes. Coeficientes globais dependem da base de concentração e da curva de equilíbrio; suas unidades precisam ser verificadas antes de usar correlações.",
+        "O fluxo molar total de A em uma mistura inclui difusão relativa à velocidade média e transporte convectivo. Em contradifusão equimolar, os fluxos das duas espécies se cancelam em termos molares; na difusão de A através de B estagnado, a situação é diferente e surge correção associada ao fluxo total. A espessura de filme e o gradiente dependem da hidrodinâmica, portanto difusividade sozinha não determina transferência industrial.",
+        "A força motriz de transferência é estabelecida entre composição do seio de uma fase e composição correspondente ao equilíbrio. Resistências do gás e do líquido devem ser combinadas somente após converter bases de concentração. Uma mudança de pressão, temperatura ou solvente altera a curva de equilíbrio e pode deslocar qual fase controla a transferência. Valores globais de coeficientes nunca devem ser usados sem suas unidades e convenção."
+      ],
+      "formula": "JA = −DAB dCA/dz",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Com DAB = 2 × 10⁻⁹ m²/s e gradiente dCA/dz = −1000 mol/m⁴, JA = 2 × 10⁻⁶ mol/(m²·s), na direção de concentração decrescente.",
+      "pitfall": "A interface é suposta em equilíbrio local entre fases; o seio pode estar fora de equilíbrio, produzindo a força motriz que sustenta o transporte.",
+      "cards": [
+        [
+          "Fluxo difusivo e fluxo total são sempre iguais?",
+          "Não. O fluxo total inclui também a contribuição convectiva."
+        ],
+        [
+          "Se D_AB=1,5×10⁻⁹ m²/s e dC_A/dz=−2000 mol/m⁴, qual o fluxo difusivo de Fick?",
+          "J_A=−D_AB dC_A/dz=3,0×10⁻⁶ mol/(m²·s), positivo no sentido crescente de z. É um fluxo relativo à referência difusiva adotada, não necessariamente o fluxo molar total."
+        ],
+        [
+          "Qual a diferença entre uma concentração interfacial e a concentração de equilíbrio com o seio de outra fase?",
+          "A interface é suposta em equilíbrio local entre fases; o seio pode estar fora de equilíbrio, produzindo a força motriz que sustenta o transporte."
+        ],
+        [
+          "Qual relação organiza o estudo de transferência de massa?",
+          "JA = −DAB dCA/dz"
+        ],
+        [
+          "Como aplicar transferência de massa em um exemplo?",
+          "Com DAB = 2 × 10⁻⁹ m²/s e gradiente dCA/dz = −1000 mol/m⁴, JA = 2 × 10⁻⁶ mol/(m²·s), na direção de concentração decrescente."
+        ],
+        [
+          "O que considerar ao interpretar transferência de massa?",
+          "A interface é suposta em equilíbrio local entre fases; o seio pode estar fora de equilíbrio, produzindo a força motriz que sustenta o transporte."
+        ]
+      ]
+    },
+    {
+      "area": "Fundamentos de processos",
+      "title": "Operações Unitárias",
+      "lead": "A destilação explora diferenças de volatilidade. Em uma mistura ideal com componente A mais volátil, a fase vapor costuma ser mais rica em A que o líquido em equilíbrio. O método de McCabe–Thiele combina a curva de equilíbrio e as retas operacionais para estimar estágios teóricos sob hipóteses como vazões molares aproximadamente constantes nas seções da coluna.",
+      "paragraphs": [
+        "Elevar a razão de refluxo tende a reduzir o número de estágios teóricos necessário para uma separação especificada, mas aumenta as cargas do refervedor e do condensador. Refluxo mínimo corresponde a uma condição limite com número de estágios tendendo ao infinito. Azeótropos podem limitar a separação por destilação simples a uma dada pressão.",
+        "A estimativa por McCabe–Thiele usa balanços operacionais e uma curva de equilíbrio, sob hipóteses como vazões molares aproximadamente constantes. O número de estágios teóricos não equivale diretamente ao número de pratos instalados: a eficiência de contato, vazão de vapor, espuma e regime hidráulico mudam o resultado industrial. O projeto também precisa verificar cargas de refervedor, condensador e perdas de pressão.",
+        "Aumentar refluxo costuma reduzir o número de estágios exigido, mas eleva circulação interna e consumo energético. Aproximar-se do refluxo mínimo exige muitos estágios e pode tornar o equipamento inviável. Misturas azeotrópicas não devem ser tratadas como binários comuns separáveis até pureza arbitrária por uma destilação simples; modificar pressão ou rota de separação pode ser necessário."
+      ],
+      "formula": "F = D + B; F zF = D xD + B xB",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Uma alimentação de 100 kmol/h com zF = 0,50 gera destilado com xD = 0,90 e fundo com xB = 0,10. Do balanço de A, D = 50 kmol/h e B = 50 kmol/h.",
+      "pitfall": "Porque o contato vapor-líquido real pode atingir apenas parte da aproximação ao equilíbrio por estágio, exigindo correção por eficiência e hidráulica.",
+      "cards": [
+        [
+          "O que acontece com a carga térmica quando o refluxo aumenta?",
+          "Em geral aumenta, pois mais líquido e vapor circulam internamente na coluna."
+        ],
+        [
+          "Uma alimentação de 100 kmol/h tem z_A=0,40; D sai com x_D=0,80 e fundo com x_B=0,10. Qual D?",
+          "Do balanço global B=100−D. Do balanço de A: 40=0,8D+0,1(100−D), logo 30=0,7D e D≈42,86 kmol/h. O fundo é ≈57,14 kmol/h."
+        ],
+        [
+          "Por que uma coluna pode precisar de mais pratos reais que estágios teóricos?",
+          "Porque o contato vapor-líquido real pode atingir apenas parte da aproximação ao equilíbrio por estágio, exigindo correção por eficiência e hidráulica."
+        ],
+        [
+          "Qual relação organiza o estudo de operações unitárias?",
+          "F = D + B; F zF = D xD + B xB"
+        ],
+        [
+          "Como aplicar operações unitárias em um exemplo?",
+          "Uma alimentação de 100 kmol/h com zF = 0,50 gera destilado com xD = 0,90 e fundo com xB = 0,10. Do balanço de A, D = 50 kmol/h e B = 50 kmol/h."
+        ],
+        [
+          "O que considerar ao interpretar operações unitárias?",
+          "Porque o contato vapor-líquido real pode atingir apenas parte da aproximação ao equilíbrio por estágio, exigindo correção por eficiência e hidráulica."
+        ]
+      ]
+    },
+    {
+      "area": "Fundamentos de processos",
+      "title": "Cinética e Reatores",
+      "lead": "A conversão de A mede a fração da alimentação de A consumida. A lei de velocidade deve ser determinada por mecanismo ou dados experimentais; a ordem não é igual ao coeficiente estequiométrico em uma reação global arbitrária. A expressão de Arrhenius usa temperatura absoluta e unidades consistentes entre energia de ativação e constante dos gases.",
+      "paragraphs": [
+        "Em um CSTR ideal permanente, concentração e temperatura no interior são iguais às da saída; a velocidade é avaliada nessas condições. Em um PFR ideal, as condições variam axialmente e o volume resulta da integração da equação de projeto. Para reação irreversível de primeira ordem, isotérmica e com densidade constante, o PFR demanda menor volume que o CSTR para a mesma conversão.",
+        "A relação entre concentração e conversão resulta de balanços e estequiometria; em gases, variações de número molar, pressão e temperatura podem impedir assumir vazão volumétrica constante. Em PFR ideal, a taxa local muda ao longo do volume e a integração de 1/(-r_A) depende da expressão cinética adotada. Usar lei de velocidade de uma reação elementar para uma reação global sem evidência não é justificável.",
+        "Um CSTR pode apresentar múltiplos estados estacionários quando geração de calor por reação e remoção térmica se cruzam mais de uma vez. A conversão aumenta a energia liberada, alterando a taxa de reação e a temperatura. Dimensionar apenas pelo balanço molar isotérmico pode ocultar risco de runaway em reações fortemente exotérmicas. Avalie a remoção de calor, a alimentação e as consequências de perturbações."
+      ],
+      "formula": "k = A exp(−Ea/RT); X = (FA0 − FA)/FA0",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Para primeira ordem, vazão volumétrica 1 L/s, k = 0,1 s⁻¹ e X = 0,8: VCSTR = 40 L; VPFR = 16,09 L. O resultado depende das hipóteses isotérmicas e de densidade constante.",
+      "pitfall": "Na hipótese de mistura perfeita e regime permanente, o conteúdo do reator tem as mesmas concentrações e temperatura do efluente.",
+      "cards": [
+        [
+          "Onde se avalia a velocidade no balanço de um CSTR?",
+          "Nas condições de concentração e temperatura da saída, iguais às do tanque idealmente misturado."
+        ],
+        [
+          "Um CSTR isotérmico de primeira ordem recebe 2 L/s, k=0,2 s⁻¹ e precisa atingir X=0,5. Qual V?",
+          "Com densidade constante, V=ν₀ X/[k(1−X)]=2×0,5/(0,2×0,5)=10 L. Uma variação de temperatura alteraria k e exigiria outro balanço."
+        ],
+        [
+          "Por que velocidade de reação em CSTR é avaliada na saída?",
+          "Na hipótese de mistura perfeita e regime permanente, o conteúdo do reator tem as mesmas concentrações e temperatura do efluente."
+        ],
+        [
+          "Qual relação organiza o estudo de cinética e reatores?",
+          "k = A exp(−Ea/RT); X = (FA0 − FA)/FA0"
+        ],
+        [
+          "Como aplicar cinética e reatores em um exemplo?",
+          "Para primeira ordem, vazão volumétrica 1 L/s, k = 0,1 s⁻¹ e X = 0,8: VCSTR = 40 L; VPFR = 16,09 L. O resultado depende das hipóteses isotérmicas e de densidade constante."
+        ],
+        [
+          "O que considerar ao interpretar cinética e reatores?",
+          "Na hipótese de mistura perfeita e regime permanente, o conteúdo do reator tem as mesmas concentrações e temperatura do efluente."
+        ]
+      ]
+    },
+    {
+      "area": "Fundamentos de processos",
+      "title": "Controle de Processos",
+      "lead": "Uma função de transferência relaciona desvios da saída e da entrada no domínio de Laplace, normalmente com condições iniciais nulas. Um modelo de primeira ordem é caracterizado por ganho estacionário e constante de tempo. Após uma constante de tempo, uma resposta de primeira ordem sem atraso alcança cerca de 63,2% da variação final para entrada degrau.",
+      "paragraphs": [
+        "A ação proporcional reage ao erro presente; a integral acumula o erro e pode eliminar desvio permanente, mas exige cuidado com saturação e windup. A derivativa reage à taxa de variação e é sensível a ruído, razão pela qual costuma receber filtragem. A escolha entre ação direta e reversa depende dos sinais do processo e do atuador, não de uma regra fixa para toda malha.",
+        "Tempo morto introduz um atraso entre ação de controle e variação observável, reduzindo a margem para controladores agressivos. Para um processo de primeira ordem, a constante τ caracteriza a resposta exponencial, enquanto o ganho determina a magnitude final. Testes de degrau devem ser feitos em condições seguras, respeitando saturação, limites operacionais e perturbações que possam invalidar o ajuste do modelo.",
+        "O termo integral reduz desvio permanente sob condições adequadas, mas pode acumular ação durante saturação do atuador, problema chamado windup. A ação derivativa ajuda a antecipar variações, mas amplifica ruídos de medição e costuma ser filtrada. Estratégia anti-windup, limites para saída e escolha de ação direta/reversa devem ser compatíveis com o sinal físico da planta e do elemento final."
+      ],
+      "formula": "G(s) = K/(τs + 1)",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Um processo com K = 2 e τ = 5 min recebe degrau unitário. A variação final é 2; após 5 min, a variação é aproximadamente 1,264, na ausência de atraso.",
+      "pitfall": "A correção atua sobre medições atrasadas, podendo chegar tarde, inverter excessivamente a ação e reduzir as margens de estabilidade.",
+      "cards": [
+        [
+          "Qual ação pode eliminar o erro permanente em uma malha estável?",
+          "A ação integral, desde que o problema e as limitações do atuador permitam atingir a referência."
+        ],
+        [
+          "Para K=3 e τ=4 min, um degrau de entrada de 2 unidades ocorre em t=0. Quanto varia a saída em 4 min?",
+          "A variação final é K×2=6. Após uma constante de tempo, Δy=6(1−e⁻¹)≈3,79 unidades, sem atraso e com modelo de primeira ordem válido."
+        ],
+        [
+          "Por que um PID pode oscilar quando se ignora tempo morto significativo?",
+          "A correção atua sobre medições atrasadas, podendo chegar tarde, inverter excessivamente a ação e reduzir as margens de estabilidade."
+        ],
+        [
+          "Qual relação organiza o estudo de controle de processos?",
+          "G(s) = K/(τs + 1)"
+        ],
+        [
+          "Como aplicar controle de processos em um exemplo?",
+          "Um processo com K = 2 e τ = 5 min recebe degrau unitário. A variação final é 2; após 5 min, a variação é aproximadamente 1,264, na ausência de atraso."
+        ],
+        [
+          "O que considerar ao interpretar controle de processos?",
+          "A correção atua sobre medições atrasadas, podendo chegar tarde, inverter excessivamente a ação e reduzir as margens de estabilidade."
+        ]
+      ]
+    },
+    {
+      "area": "Fundamentos de processos",
+      "title": "Métodos Numéricos",
+      "lead": "O método da bisseção exige função contínua em um intervalo cujas extremidades tenham sinais opostos; a cada iteração o intervalo é reduzido pela metade. Newton–Raphson usa a derivada e pode convergir rapidamente perto de uma raiz simples, mas uma escolha inicial ruim, derivada quase nula ou descontinuidade pode causar falha.",
+      "paragraphs": [
+        "Um erro numérico pequeno não garante modelo físico adequado. Examine resíduos, sensibilidade a tolerâncias, unidades e restrições físicas, como frações entre zero e um. Em sistemas lineares, uma matriz mal condicionada amplifica perturbações nos dados; aumentar apenas o número de casas decimais exibidas não resolve a origem do problema.",
+        "O resíduo é o valor da função ou do balanço após substituir a solução numérica; o erro é diferença em relação à solução verdadeira, geralmente desconhecida. Um resíduo pequeno pode coexistir com erro grande em problemas mal condicionados. Ao relatar convergência, registre tolerâncias, escala das variáveis e variação da resposta frente a alterações de passo ou chute inicial.",
+        "Em modelos de processos, uma rotina que converge matematicamente ainda pode violar restrições físicas, como frações negativas ou conversão acima de um. Cada solução deve passar por checagem de unidades, fechamento de massa e energia, coerência de sinais e intervalos admissíveis. Comparar com solução analítica de caso simples ou estimativa de ordem de grandeza reduz dependência do próprio programa."
+      ],
+      "formula": "xn+1 = xn − f(xn)/f′(xn)",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Para f(x) = x² − 2 e x0 = 1, Newton produz x1 = 1,5 e x2 ≈ 1,41667. O procedimento aproxima a raiz positiva, mas não substitui a análise da função.",
+      "pitfall": "Suavidade visual não demonstra consistência física, independência das unidades, convergência adequada nem fidelidade dos parâmetros aos dados.",
+      "cards": [
+        [
+          "Qual condição permite iniciar a bisseção?",
+          "Continuidade no intervalo e valores de função de sinais opostos nas extremidades."
+        ],
+        [
+          "Para f(x)=x²−9 com x₀=4, qual é o passo de Newton?",
+          "f(4)=7 e f′(4)=8; logo x₁=4−7/8=3,125. A aproximação é coerente com raiz positiva 3, mas novos passos e avaliação do resíduo ainda são necessários."
+        ],
+        [
+          "Por que um gráfico suave produzido por simulação não valida o modelo?",
+          "Suavidade visual não demonstra consistência física, independência das unidades, convergência adequada nem fidelidade dos parâmetros aos dados."
+        ],
+        [
+          "Qual relação organiza o estudo de métodos numéricos?",
+          "xn+1 = xn − f(xn)/f′(xn)"
+        ],
+        [
+          "Como aplicar métodos numéricos em um exemplo?",
+          "Para f(x) = x² − 2 e x0 = 1, Newton produz x1 = 1,5 e x2 ≈ 1,41667. O procedimento aproxima a raiz positiva, mas não substitui a análise da função."
+        ],
+        [
+          "O que considerar ao interpretar métodos numéricos?",
+          "Suavidade visual não demonstra consistência física, independência das unidades, convergência adequada nem fidelidade dos parâmetros aos dados."
+        ]
+      ]
+    },
+    {
+      "area": "Fundamentos de processos",
+      "title": "Processos Bioquímicos",
+      "lead": "A velocidade específica de crescimento relaciona aumento de biomassa e biomassa existente. A equação de Monod representa uma dependência empírica com a concentração de substrato limitante; não descreve automaticamente inibição, manutenção ou todos os regimes de cultura. Os parâmetros dependem do microrganismo e das condições do processo.",
+      "paragraphs": [
+        "Em um quimiostato ideal sem retenção celular, a taxa de diluição é D = Q/V. Em regime permanente com biomassa não nula e hipóteses simplificadas, μ = D. Diluição excessiva pode levar à lavagem celular. Para processos aeróbios, a transferência de oxigênio pode limitar a produtividade e deve ser comparada à demanda celular.",
+        "A taxa volumétrica de transferência de oxigênio pode ser aproximada por k_La(C*−C_L). Essa expressão deve ser comparada com a demanda metabólica; aumentar agitação altera k_La mas também consumo de energia e estresse de cisalhamento. Oxigênio dissolvido próximo de zero pode indicar limitação, falha de sensor ou demanda elevada, e requer diagnóstico antes de aumentar aeração.",
+        "Em um quimiostato ideal com biomassa não nula, a taxa específica de crescimento iguala a diluição sob hipóteses simplificadas. Se D ultrapassa a capacidade de crescimento sustentável, há risco de washout. O rendimento de biomassa sobre substrato depende das condições e não equivale a fração mássica de substrato convertida em biomassa sem considerar subprodutos e manutenção."
+      ],
+      "formula": "μ = μmax S/(KS + S)",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Se μmax = 0,5 h⁻¹, KS = 2 g/L e S = 2 g/L, μ = 0,25 h⁻¹. O valor corresponde à metade de μmax porque S = KS.",
+      "pitfall": "Porque k_La depende de hidrodinâmica, dispersão gasosa, viscosidade, geometria e consumo celular, e sua relação com rpm não é linear universal.",
+      "cards": [
+        [
+          "Quando Monod prevê metade de μmax?",
+          "Quando a concentração de substrato é igual a KS."
+        ],
+        [
+          "Se k_La=80 h⁻¹ e C*−C_L=0,003 g/L, qual OTR?",
+          "OTR=k_La ΔC=80×0,003=0,24 g/(L·h). Para 1000 L seriam 240 g/h como estimativa de transferência, antes de variações espaciais e de operação."
+        ],
+        [
+          "Por que dobrar a rotação do agitador não garante dobrar o oxigênio transferido?",
+          "Porque k_La depende de hidrodinâmica, dispersão gasosa, viscosidade, geometria e consumo celular, e sua relação com rpm não é linear universal."
+        ],
+        [
+          "Qual relação organiza o estudo de processos bioquímicos?",
+          "μ = μmax S/(KS + S)"
+        ],
+        [
+          "Como aplicar processos bioquímicos em um exemplo?",
+          "Se μmax = 0,5 h⁻¹, KS = 2 g/L e S = 2 g/L, μ = 0,25 h⁻¹. O valor corresponde à metade de μmax porque S = KS."
+        ],
+        [
+          "O que considerar ao interpretar processos bioquímicos?",
+          "Porque k_La depende de hidrodinâmica, dispersão gasosa, viscosidade, geometria e consumo celular, e sua relação com rpm não é linear universal."
+        ]
+      ]
+    },
+    {
+      "area": "Fundamentos de processos",
+      "title": "Engenharia Ambiental",
+      "lead": "Concentração sozinha não descreve o impacto de uma corrente: a carga é o produto da concentração pela vazão, com conversão coerente de unidades. A eficiência de remoção compara cargas de entrada e saída quando as vazões diferem. Reduzir concentração por diluição não equivale a remover massa de poluente.",
+      "paragraphs": [
+        "Sedimentação remove principalmente sólidos separáveis por gravidade; tratamento biológico transforma matéria biodegradável por ação microbiana. DBO e DQO são indicadores distintos e não podem ser trocados diretamente. A seleção da rota exige caracterização do efluente, variabilidade, destino e requisitos locais aplicáveis.",
+        "Para avaliar um efluente variável, calcule cargas por combinação de concentração e vazão representativas no tempo. Uma concentração amostrada no instante de baixa vazão pode não descrever a carga diária. Comparar apenas mg/L na entrada e na saída pode ser enganoso se houver diluição, evaporação ou desvio de correntes. Feche o balanço da espécie e distinga remoção física de transformação química.",
+        "Coagulação, sedimentação e filtração podem remover sólidos em suspensão enquanto etapas biológicas reduzem matéria biodegradável. A eficiência global de unidades em série não é a soma direta das porcentagens de remoção; depende da concentração restante após cada operação. O lodo é uma corrente de saída de massa que precisa ser caracterizada, armazenada e destinada conforme a legislação aplicável."
+      ],
+      "formula": "Carga = Q C; η = (Cargaentrada − Cargasaída)/Cargaentrada",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Com Q = 100 m³/d e C = 200 mg/L, a carga é 20 kg/d. Se a mesma vazão sai com 40 mg/L, a carga de saída é 4 kg/d e a remoção é 80%.",
+      "pitfall": "Porque a massa total do poluente permanece, enquanto o volume aumenta; a carga emitida pode ficar praticamente igual.",
+      "cards": [
+        [
+          "Diluir um efluente remove carga poluidora?",
+          "Não. Sem transformação ou separação, a massa de poluente permanece."
+        ],
+        [
+          "A DQO cai de 500 para 100 mg/L mantendo Q=200 m³/d. Quantos kg de DQO são removidos por dia?",
+          "Entrada 200×500×0,001=100 kg/d; saída 200×100×0,001=20 kg/d. Remoção=80 kg/d, eficiência de 80%, assumindo vazões estáveis e representativas."
+        ],
+        [
+          "Por que reduzir concentração por adicionar água não equivale a tratar o poluente?",
+          "Porque a massa total do poluente permanece, enquanto o volume aumenta; a carga emitida pode ficar praticamente igual."
+        ],
+        [
+          "Qual relação organiza o estudo de engenharia ambiental?",
+          "Carga = Q C; η = (Cargaentrada − Cargasaída)/Cargaentrada"
+        ],
+        [
+          "Como aplicar engenharia ambiental em um exemplo?",
+          "Com Q = 100 m³/d e C = 200 mg/L, a carga é 20 kg/d. Se a mesma vazão sai com 40 mg/L, a carga de saída é 4 kg/d e a remoção é 80%."
+        ],
+        [
+          "O que considerar ao interpretar engenharia ambiental?",
+          "Porque a massa total do poluente permanece, enquanto o volume aumenta; a carga emitida pode ficar praticamente igual."
+        ]
+      ]
+    },
+    {
+      "area": "Fundamentos de processos",
+      "title": "Projeto de Processos",
+      "lead": "O diagrama de blocos apresenta a sequência geral. O fluxograma de processo detalha equipamentos principais e correntes com vazão, temperatura, pressão e composição. O P&ID registra instrumentação, tubulações e dispositivos associados. Cada representação serve a uma etapa e não deve ser confundida com uma especificação completa de fabricação.",
+      "paragraphs": [
+        "Estimativas econômicas devem declarar ano base, moeda, capacidade, escopo e método. Valor presente líquido desconta fluxos futuros e depende da taxa de desconto; payback simples ignora o valor do dinheiro no tempo. Faça análise de sensibilidade para preço, utilidades, rendimento e disponibilidade, pois uma estimativa pontual esconde riscos relevantes.",
+        "O PFD fornece equipamentos principais e uma lista coerente de correntes com vazão, composição, temperatura e pressão. Antes de dimensionar, defina capacidade nominal, casos de operação, propriedades e fronteira do processo. A validação por balanços independentes reduz erros de modelagem que se propagariam em estimativas de área, utilidades e custos. Mudanças de revisão devem ser rastreadas.",
+        "Uma estimativa de investimento precisa de ano-base, moeda, escopo e nível de maturidade do projeto. O VPL depende da taxa de desconto, do perfil temporal de caixa e das premissas de operação. Em vez de comunicar somente um resultado pontual, compare cenários para preço da matéria-prima, energia, rendimento, disponibilidade e investimento inicial; identifique quais variáveis mudam o sinal do VPL."
+      ],
+      "formula": "Receita − custos operacionais = resultado operacional simplificado",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Um investimento de 100 unidades monetárias e retornos de 60 em cada um de dois anos, descontados a 10% ao ano, resulta em VPL ≈ 4,13 unidades. Impostos e capital de giro foram omitidos no exemplo.",
+      "pitfall": "O bloco mostra operações de forma simplificada; o P&ID detalha linhas, válvulas, instrumentos e informações necessárias a revisão de operação e segurança.",
+      "cards": [
+        [
+          "Por que fazer análise de sensibilidade?",
+          "Para identificar quais premissas mais alteram os resultados e a viabilidade do projeto."
+        ],
+        [
+          "Um processo dispõe de calor residual de 180 kW durante 4000 h/ano; se toda energia substituísse utilidade de R$ 0,12/kWh, qual economia bruta?",
+          "Energia anual=180×4000=720000 kWh. Economia bruta máxima=R$ 86.400/ano. O cálculo ignora disponibilidade real, eficiência da recuperação, manutenção e CAPEX."
+        ],
+        [
+          "Por que um P&ID não deve ser substituído por um fluxograma de blocos?",
+          "O bloco mostra operações de forma simplificada; o P&ID detalha linhas, válvulas, instrumentos e informações necessárias a revisão de operação e segurança."
+        ],
+        [
+          "Qual relação organiza o estudo de projeto de processos?",
+          "Receita − custos operacionais = resultado operacional simplificado"
+        ],
+        [
+          "Como aplicar projeto de processos em um exemplo?",
+          "Um investimento de 100 unidades monetárias e retornos de 60 em cada um de dois anos, descontados a 10% ao ano, resulta em VPL ≈ 4,13 unidades. Impostos e capital de giro foram omitidos no exemplo."
+        ],
+        [
+          "O que considerar ao interpretar projeto de processos?",
+          "O bloco mostra operações de forma simplificada; o P&ID detalha linhas, válvulas, instrumentos e informações necessárias a revisão de operação e segurança."
+        ]
+      ]
+    },
+    {
+      "area": "Fundamentos matemáticos",
+      "title": "Cálculo Diferencial Aplicado",
+      "lead": "A derivada mede a sensibilidade local de uma grandeza em relação a outra. Para interpretar dT/dt é preciso dizer se o tempo está em segundos ou minutos e quais outras variáveis foram mantidas constantes. Em curvas medidas, a derivada deve ser estimada com cuidado porque diferenças entre pontos amplificam ruídos experimentais. Uma derivada parcial, como ∂P/∂T a volume fixo, não representa a mesma situação que a derivada total ao longo de uma trajetória de operação.",
+      "paragraphs": [
+        "Em um projeto preliminar, o sinal da primeira derivada indica crescimento ou redução do desempenho; pontos estacionários exigem confirmação por segunda derivada ou análise de contorno. Aproximações lineares permitem estimar pequenas perturbações em torno de um ponto de operação. Em sistemas multivariáveis, o gradiente indica o efeito isolado de cada variável e as restrições de processo mudam onde o melhor ponto realmente pode ocorrer.",
+        "Em um tanque aquecido, dT/dt indica rapidez da mudança térmica e dT/dQ̇ caracteriza sensibilidade a uma entrada de energia no regime estudado. Derivadas parciais são usadas quando pressão, volume ou composição precisam permanecer constantes. Antes de derivar, defina variáveis independentes, unidade e domínio físico para não comparar gradientes de naturezas diferentes.",
+        "Zerar a derivada de uma função objetivo encontra candidatos a extremos, não garante a melhor operação industrial. A restrição de temperatura máxima, vazão mínima ou capacidade de bomba pode colocar o ótimo na fronteira. Compare sinal da derivada, extremos do intervalo e viabilidade das soluções antes de escolher."
+      ],
+      "formula": "dy/dx = lim(Δx→0) Δy/Δx; Δy ≈ f′(x0) Δx",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Se Q(t)=2t²+5t, com Q em L e t em min, a vazão instantânea é Q′(t)=4t+5 L/min. Em t=3 min, Q′=17 L/min. O valor Q(3)=33 L é volume acumulado, não vazão.",
+      "pitfall": "Não identifique toda derivada com velocidade de escoamento. Declare variável, unidades e condições fixas; não use aproximação linear para variações grandes sem estimar curvatura.",
+      "cards": [
+        [
+          "Por que a unidade de dQ/dt difere de Q?",
+          "Porque uma derivada em relação ao tempo expressa variação da grandeza por unidade de tempo."
+        ],
+        [
+          "Se C(x)=x²−6x+15, para 1≤x≤5, qual o mínimo matemático?",
+          "C′=2x−6 zera em x=3. Como C″=2 positivo, C(3)=6 é o mínimo interno; nos extremos C(1)=10 e C(5)=10. O resultado só tem uso industrial se x e C tiverem significado físico e unidades definidas."
+        ],
+        [
+          "Por que dT/dt e ∂T/∂P não são intercambiáveis?",
+          "Possuem variáveis independentes, unidades e condições fixas diferentes. O primeiro descreve evolução temporal; o segundo, sensibilidade à pressão sob restrições específicas."
+        ],
+        [
+          "Qual relação organiza o estudo de cálculo diferencial aplicado?",
+          "dy/dx = lim(Δx→0) Δy/Δx; Δy ≈ f′(x0) Δx"
+        ],
+        [
+          "Como aplicar cálculo diferencial aplicado em um exemplo?",
+          "Se Q(t)=2t²+5t, com Q em L e t em min, a vazão instantânea é Q′(t)=4t+5 L/min. Em t=3 min, Q′=17 L/min. O valor Q(3)=33 L é volume acumulado, não vazão."
+        ],
+        [
+          "O que considerar ao interpretar cálculo diferencial aplicado?",
+          "Não identifique toda derivada com velocidade de escoamento. Declare variável, unidades e condições fixas; não use aproximação linear para variações grandes sem estimar curvatura."
+        ]
+      ]
+    },
+    {
+      "area": "Fundamentos matemáticos",
+      "title": "Cálculo Integral e Equações Diferenciais",
+      "lead": "A integral definida soma contribuições elementares, permitindo obter massa total a partir de uma vazão variável no tempo ou volume de um equipamento a partir de sua seção. Quando a taxa depende do tempo, multiplicar por uma duração só é correto se for aproximadamente constante. Para interpretar uma integral, verifique se a grandeza integrada é vazão mássica, molar ou volumétrica e mantenha as conversões coerentes.",
+      "paragraphs": [
+        "Balanços dinâmicos frequentemente geram equações diferenciais da forma τdy/dt+y=K u(t). A condição inicial seleciona uma solução particular e representa o estado do processo no início do experimento. Em uma resposta a degrau, a constante de tempo caracteriza a rapidez de aproximação ao novo regime, mas não elimina a importância de atraso, não linearidade ou limites de atuação.",
+        "O volume que entra em um reservatório durante uma operação transiente é a integral temporal da vazão volumétrica, não o produto da vazão final pelo tempo. Se houver retirada simultânea, integre a diferença entre entrada e saída. Reescreva todas as taxas na mesma base temporal e verifique se a quantidade acumulada respeita a capacidade do equipamento.",
+        "Uma EDO de primeira ordem descreve família de soluções até receber condição inicial. Em processos estáveis lineares, a solução contém regime permanente e transiente exponencial. A constante de tempo permite interpretar a resposta, mas modelos de múltiplas capacidades ou atrasos não devem ser reduzidos automaticamente a uma exponencial única."
+      ],
+      "formula": "M(t2)-M(t1) = ∫[t1,t2] ṁ(t)dt; τ dy/dt+y=Ku",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Um tanque acumula líquido a ṁ(t)=3+0,2t kg/min, sem saída, entre 0 e 10 min. A massa adicionada é ∫(3+0,2t)dt =30+10=40 kg. O valor instantâneo no fim é 5 kg/min e não 40 kg/min.",
+      "pitfall": "Uma integral de taxa fornece quantidade acumulada; não confunda taxa final com média. Em uma EDO, explicite a condição inicial e as hipóteses de linearidade.",
+      "cards": [
+        [
+          "Qual informação é indispensável para determinar a solução particular de uma EDO de primeira ordem?",
+          "Uma condição inicial ou condição equivalente e os parâmetros do modelo."
+        ],
+        [
+          "Um tanque recebe q(t)=4+t L/min de 0 a 6 min, sem saída. Quanto volume é adicionado?",
+          "Integre de 0 a 6: V=∫(4+t)dt=[4t+t²/2]₀⁶=24+18=42 L. A vazão final é 10 L/min; não multiplique 10 por 6."
+        ],
+        [
+          "O que muda quando um tanque também possui saída variável?",
+          "A derivada do volume passa a ser entrada menos saída; a integral deve considerar ambas as taxas com sinais e unidades coerentes."
+        ],
+        [
+          "Qual relação organiza o estudo de cálculo integral e equações diferenciais?",
+          "M(t2)-M(t1) = ∫[t1,t2] ṁ(t)dt; τ dy/dt+y=Ku"
+        ],
+        [
+          "Como aplicar cálculo integral e equações diferenciais em um exemplo?",
+          "Um tanque acumula líquido a ṁ(t)=3+0,2t kg/min, sem saída, entre 0 e 10 min. A massa adicionada é ∫(3+0,2t)dt =30+10=40 kg. O valor instantâneo no fim é 5 kg/min e não 40 kg/min."
+        ],
+        [
+          "O que considerar ao interpretar cálculo integral e equações diferenciais?",
+          "Uma integral de taxa fornece quantidade acumulada; não confunda taxa final com média. Em uma EDO, explicite a condição inicial e as hipóteses de linearidade."
+        ]
+      ]
+    },
+    {
+      "area": "Ciências básicas",
+      "title": "Física: Mecânica e Energia",
+      "lead": "Uma análise de forças começa pela escolha do corpo ou volume de controle e pelo diagrama de corpo livre. A resultante é igual à taxa de variação da quantidade de movimento; para massa constante, obtém-se ΣF=ma. A força normal não é obrigatoriamente igual ao peso, e o atrito depende de contato e direção do movimento relativo. Em tubulações e jatos, a mesma ideia se generaliza ao balanço de quantidade de movimento de fluidos.",
+      "paragraphs": [
+        "Trabalho é transferência de energia associada ao deslocamento sob a ação de forças, com sinal dependente do produto escalar força-deslocamento. A energia cinética varia com o quadrado da velocidade, o que torna mudanças de velocidade particularmente relevantes em máquinas e escoamentos. Em sistemas reais, dissipação, perdas e transferência de energia precisam ser identificadas para que a conservação não seja aplicada com termos ausentes.",
+        "A força exercida por um jato que muda de direção depende da variação do fluxo de quantidade de movimento. Defina volume de controle, componentes vetoriais de velocidades e forças de pressão e parede. Mesmo com módulo de velocidade quase constante, um cotovelo pode sofrer força significativa porque a direção do vetor velocidade se altera.",
+        "A energia potencial gravitacional e a cinética são componentes do balanço mecânico. Atrito converte energia mecânica ordenada em energia interna; não se deve chamar o processo de criação ou destruição de energia. Para comparar estados, mantenha a mesma referência de cota e inclua trabalhos de máquinas quando existirem."
+      ],
+      "formula": "ΣF = ma; Ec = mv²/2; W = ∫F·ds",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Um conjunto de 10 kg acelera de 2 para 4 m/s. A variação de energia cinética é 0,5×10×(16−4)=60 J. O trabalho resultante nesse intervalo é 60 J, sob as hipóteses do teorema trabalho–energia.",
+      "pitfall": "A conservação de energia não afirma que energia mecânica permaneça constante. Dissipação transforma energia mecânica em outras formas; explicite o sistema e o caminho.",
+      "cards": [
+        [
+          "Por que dobrar a velocidade quadruplica a energia cinética para a mesma massa?",
+          "Porque a energia cinética é proporcional ao quadrado da velocidade."
+        ],
+        [
+          "Um corpo de 5 kg passa de 3 para 7 m/s. Qual a variação da energia cinética?",
+          "ΔEc=0,5×5×(49−9)=100 J. Essa é a variação da energia cinética; o trabalho resultante deve igualar 100 J sob o teorema trabalho–energia."
+        ],
+        [
+          "Por que uma curva em tubulação exerce força mesmo sem mudança da rapidez média?",
+          "Porque a quantidade de movimento é vetorial e muda quando o sentido da velocidade se altera, exigindo força resultante."
+        ],
+        [
+          "Qual relação organiza o estudo de física: mecânica e energia?",
+          "ΣF = ma; Ec = mv²/2; W = ∫F·ds"
+        ],
+        [
+          "Como aplicar física: mecânica e energia em um exemplo?",
+          "Um conjunto de 10 kg acelera de 2 para 4 m/s. A variação de energia cinética é 0,5×10×(16−4)=60 J. O trabalho resultante nesse intervalo é 60 J, sob as hipóteses do teorema trabalho–energia."
+        ],
+        [
+          "O que considerar ao interpretar física: mecânica e energia?",
+          "A conservação de energia não afirma que energia mecânica permaneça constante. Dissipação transforma energia mecânica em outras formas; explicite o sistema e o caminho."
+        ]
+      ]
+    },
+    {
+      "area": "Ciências básicas",
+      "title": "Eletricidade e Eletromagnetismo",
+      "lead": "A corrente elétrica é taxa de transporte de carga, enquanto a diferença de potencial está relacionada à energia por carga. A lei de Ohm descreve componentes aproximadamente resistivos no regime considerado, mas não todos os sensores e dispositivos industriais. Circuitos em série compartilham corrente e circuitos em paralelo compartilham tensão. A análise deve respeitar orientação de corrente e convenção passiva de sinais.",
+      "paragraphs": [
+        "Motores, válvulas e transmissores convertem grandezas físicas em sinais elétricos. Ao interpretar um sensor, distinga exatidão, resolução, faixa e linearidade; o condicionamento do sinal pode ser tão importante quanto a medição primária. Campos magnéticos surgem associados a correntes e ímãs, com aplicações em motores e medidores eletromagnéticos de vazão para líquidos condutores.",
+        "Transmissores industriais convertem pressão, nível ou vazão em sinais padronizados, mas um valor de corrente só vira grandeza de processo depois de conhecer limite inferior e superior de escala. A presença de 4 mA como zero nominal permite distinguir certas falhas, dependendo do diagnóstico. Registre também faixa, calibração, incerteza e comportamento fora da escala.",
+        "Resistores ideais obedecem V=RI, mas elementos reativos, motores e sensores apresentam comportamento dinâmico ou não linear. Corrente elétrica elevada pode provocar aquecimento dos condutores; potência e energia devem ser diferenciadas ao estimar operação. Verifique sentido de corrente, conexões de série e paralelo e limites térmicos dos componentes."
+      ],
+      "formula": "V = RI; P = VI; E = ∫P dt",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Um resistor de 20 Ω ligado a 12 V conduz I=12/20=0,6 A. A potência dissipada é 7,2 W. Em 10 min, consome 7,2×600=4320 J. A aplicação exige verificar a potência nominal do componente.",
+      "pitfall": "Evite confundir potência (W) com energia (J ou kWh), e não assuma que um transmissor real se comporta como resistor ideal.",
+      "cards": [
+        [
+          "Se uma resistência permanece constante, o que ocorre com a potência quando se dobra a tensão?",
+          "A potência aumenta quatro vezes, pois P=V²/R."
+        ],
+        [
+          "Um transmissor de 0 a 200 °C fornece 16 mA em escala 4–20 mA. Qual temperatura indicada?",
+          "(16−4)/(20−4)=0,75 da faixa; temperatura ideal indicada=150 °C. A leitura não garante exatidão sem calibração."
+        ],
+        [
+          "Por que 12 mA não significa sempre a mesma pressão?",
+          "O sinal representa uma fração da faixa configurada; se limites de calibração mudam, a grandeza correspondente também muda."
+        ],
+        [
+          "Qual relação organiza o estudo de eletricidade e eletromagnetismo?",
+          "V = RI; P = VI; E = ∫P dt"
+        ],
+        [
+          "Como aplicar eletricidade e eletromagnetismo em um exemplo?",
+          "Um resistor de 20 Ω ligado a 12 V conduz I=12/20=0,6 A. A potência dissipada é 7,2 W. Em 10 min, consome 7,2×600=4320 J. A aplicação exige verificar a potência nominal do componente."
+        ],
+        [
+          "O que considerar ao interpretar eletricidade e eletromagnetismo?",
+          "Evite confundir potência (W) com energia (J ou kWh), e não assuma que um transmissor real se comporta como resistor ideal."
+        ]
+      ]
+    },
+    {
+      "area": "Química fundamental",
+      "title": "Química Geral e Estequiometria",
+      "lead": "O mol conecta quantidades microscópicas à massa laboratorial por meio da massa molar. Antes de usar relações de uma equação química, balanceie os átomos e confirme a forma química das espécies. O reagente limitante é aquele que permite a menor extensão de reação para as quantidades disponíveis; não é necessariamente o que tem menor massa. Um excesso deliberado de reagente deve ser separado do cálculo de rendimento e seletividade.",
+      "paragraphs": [
+        "Concentração molar representa mols por volume de solução e pode variar com a temperatura pela expansão volumétrica. Diluir uma solução altera concentração, mas não os mols de soluto quando não há reação nem perdas. pH, atividade e equilíbrio não são sinônimos de concentração em qualquer condição; aproximações ideais precisam ser declaradas. Práticas laboratoriais exigem identificação de substâncias, incompatibilidades e consulta às fichas de segurança antes da manipulação.",
+        "Balancear a equação é condição anterior a qualquer proporção molar. Divida os mols disponíveis pelo coeficiente estequiométrico e compare extensões possíveis; o menor valor identifica o limitante. Depois calcule produto máximo e compare com o isolado para rendimento. Reagente em excesso pode permanecer mesmo quando o limitante reage totalmente.",
+        "Conservar mols de soluto permite calcular concentração após diluição sem reação, desde que volumes sejam tratados nas condições indicadas. Para misturas não ideais, pH está associado à atividade do íon hidrogênio, e concentrações podem não representar diretamente atividades. Efeitos de temperatura, força iônica e reações ácido-base precisam ser considerados conforme a exigência do problema."
+      ],
+      "formula": "n = m/M; nA/νA = nB/νB na conversão estequiométrica",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Para 2H₂+O₂→2H₂O, 6 mol de H₂ e 2 mol de O₂ permitem reagir 4 mol de H₂, produzindo 4 mol de água. O₂ é limitante e sobram 2 mol de H₂, se a conversão do limitante for completa.",
+      "pitfall": "Rendimento menor que 100% não altera a estequiometria teórica; ele indica que o produto real difere do máximo pelas condições do processo e possíveis perdas.",
+      "cards": [
+        [
+          "Como identificar reagente limitante?",
+          "Compare a quantidade disponível de cada reagente dividida pelo respectivo coeficiente estequiométrico."
+        ],
+        [
+          "Na reação N₂+3H₂→2NH₃, entram 2 mol de N₂ e 3 mol de H₂. Qual produção teórica?",
+          "H₂ limita a extensão a 1 mol de reação; formam-se 2 mol de NH₃ e sobra 1 mol de N₂, para conversão completa do limitante."
+        ],
+        [
+          "Por que a menor massa inicial não identifica o reagente limitante?",
+          "A comparação correta usa mols e coeficientes estequiométricos; massas molares e proporções da reação variam entre os reagentes."
+        ],
+        [
+          "Qual relação organiza o estudo de química geral e estequiometria?",
+          "n = m/M; nA/νA = nB/νB na conversão estequiométrica"
+        ],
+        [
+          "Como aplicar química geral e estequiometria em um exemplo?",
+          "Para 2H₂+O₂→2H₂O, 6 mol de H₂ e 2 mol de O₂ permitem reagir 4 mol de H₂, produzindo 4 mol de água. O₂ é limitante e sobram 2 mol de H₂, se a conversão do limitante for completa."
+        ],
+        [
+          "O que considerar ao interpretar química geral e estequiometria?",
+          "Rendimento menor que 100% não altera a estequiometria teórica; ele indica que o produto real difere do máximo pelas condições do processo e possíveis perdas."
+        ]
+      ]
+    },
+    {
+      "area": "Química fundamental",
+      "title": "Química Orgânica Aplicada",
+      "lead": "A estrutura molecular determina polaridade, possibilidades de ligação de hidrogênio e interações intermoleculares, que afetam solubilidade, volatilidade e seleção de solventes. Álcool, ácido carboxílico, éster, aldeído, cetona e amina apresentam reatividades características, mas os efeitos de substituintes e do meio mudam o comportamento real. Nomenclatura deve vir acompanhada de identificação estrutural e da função química relevante.",
+      "paragraphs": [
+        "Uma reação orgânica deve ser avaliada por quais ligações se rompem, quais se formam e o que estabiliza intermediários ou estados de transição. Catálise, solvente e temperatura podem influenciar velocidade e seletividade. Em rotas industriais, o produto desejado pode competir com subprodutos; pureza de matéria-prima, remoção de calor e escolha de separação posterior impactam o rendimento global.",
+        "Solubilidade de um composto depende de polaridade, interações de dispersão e ligações de hidrogênio, além da temperatura. A escolha de solvente industrial não considera somente dissolução: volatilidade, inflamabilidade, toxicidade, recuperação e compatibilidade com equipamentos afetam viabilidade. Um solvente adequado em reação pode exigir rota separativa mais onerosa.",
+        "Conversão mede consumo de reagente; seletividade mede destino entre produtos; rendimento combina efeitos de reação e recuperação conforme a definição adotada. Para reações paralelas, temperatura e catalisador podem alterar a distribuição de produtos. Um rendimento isolado baixo pode resultar de perdas na separação mesmo quando a formação do produto na reação é satisfatória."
+      ],
+      "formula": "Rendimento = (massa real de produto / massa teórica de produto) × 100%",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Na esterificação idealizada de 1 mol de ácido monocarboxílico com 1 mol de álcool, a estequiometria permite no máximo 1 mol de éster. Se forem isolados 0,78 mol, o rendimento em relação ao máximo teórico é 78%, sem inferir a conversão nem a seletividade isoladamente.",
+      "pitfall": "Não confunda rendimento isolado com conversão de reagente. Uma única análise de composição pode não distinguir reações paralelas e perdas na purificação.",
+      "cards": [
+        [
+          "O que diferencia uma conversão alta de uma seletividade alta?",
+          "Conversão indica reagente consumido; seletividade indica quanto desse consumo gerou o produto desejado."
+        ],
+        [
+          "Uma reação pode gerar teoricamente 50 mol de éster e foram isolados 35 mol. Qual rendimento isolado?",
+          "Rendimento=35/50×100=70%, relativo ao limite teórico calculado. O dado não permite deduzir isoladamente conversão ou seletividade."
+        ],
+        [
+          "Por que aumentar conversão pode reduzir rendimento do produto desejado?",
+          "Porque um reagente pode ser consumido em rotas paralelas ou o produto formado pode participar de reações consecutivas indesejadas."
+        ],
+        [
+          "Qual relação organiza o estudo de química orgânica aplicada?",
+          "Rendimento = (massa real de produto / massa teórica de produto) × 100%"
+        ],
+        [
+          "Como aplicar química orgânica aplicada em um exemplo?",
+          "Na esterificação idealizada de 1 mol de ácido monocarboxílico com 1 mol de álcool, a estequiometria permite no máximo 1 mol de éster. Se forem isolados 0,78 mol, o rendimento em relação ao máximo teórico é 78%, sem inferir a conversão nem a seletividade isoladamente."
+        ],
+        [
+          "O que considerar ao interpretar química orgânica aplicada?",
+          "Não confunda rendimento isolado com conversão de reagente. Uma única análise de composição pode não distinguir reações paralelas e perdas na purificação."
+        ]
+      ]
+    },
+    {
+      "area": "Química fundamental",
+      "title": "Físico-Química de Soluções",
+      "lead": "A energia de Gibbs permite formular critérios de equilíbrio em temperatura e pressão constantes. Para um processo espontâneo nessas condições, a variação de Gibbs do sistema tende a ser negativa, mas essa condição deve ser aplicada ao sistema e às restrições corretamente definidos. O potencial químico representa a contribuição parcial molar de Gibbs e sua igualdade entre fases explica a distribuição de componentes no equilíbrio.",
+      "paragraphs": [
+        "Atividade fornece uma forma termodinamicamente consistente de expressar composição efetiva em equações de equilíbrio. Coeficientes de atividade corrigem desvios de idealidade conforme estado padrão e modelo escolhidos. Em líquidos não ideais, a pressão de vapor de um componente não deve ser calculada apenas por sua fração molar multiplicada por pressão de saturação, sem verificar a faixa em que a lei de Raoult é apropriada.",
+        "A variação de Gibbs indica direção termodinamicamente favorecida em condições especificadas; a magnitude de ΔG não informa a velocidade. A energia livre padrão se relaciona à constante de equilíbrio, enquanto a energia livre fora do estado padrão depende do quociente de reação. Sempre use T absoluta e unidades compatíveis para R, ΔG e ΔG°.",
+        "Em solução real, atividade pode divergir da concentração ou fração molar. Coeficientes de atividade dependem de composição, temperatura e convenção do estado padrão; o valor igual a um representa uma situação ideal naquela base. Para soluções altamente não ideais, usar Raoult sem correção pode prever incorretamente equilíbrio líquido-vapor ou distribuição de espécies."
+      ],
+      "formula": "ΔG = ΔH − TΔS; μi = μi° + RT ln(ai)",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Se ΔH=−20 kJ/mol e ΔS=−50 J/(mol·K), a 298 K, ΔG≈−20−298×(−0,050)=−5,1 kJ/mol. Sob temperatura e pressão constantes, o valor negativo favorece a direção escrita em termos de Gibbs.",
+      "pitfall": "Uma reação termodinamicamente favorecida não precisa ocorrer rapidamente; velocidade depende da cinética e das barreiras de ativação.",
+      "cards": [
+        [
+          "Equilíbrio químico significa necessariamente que a velocidade de reação seja nula?",
+          "Não. No equilíbrio dinâmico, as velocidades direta e inversa podem ser iguais e não nulas."
+        ],
+        [
+          "Se ΔH=10 kJ/mol, ΔS=50 J/(mol·K) e T=300 K, quanto vale ΔG?",
+          "Converta ΔS=0,050 kJ/(mol·K). ΔG=10−300×0,050=−5 kJ/mol, favorecendo a direção considerada em T e P constantes."
+        ],
+        [
+          "Por que uma reação exotérmica não é necessariamente espontânea em qualquer temperatura?",
+          "Espontaneidade é avaliada por ΔG=ΔH−TΔS nas condições adequadas, e a contribuição entrópica pode alterar o sinal."
+        ],
+        [
+          "Qual relação organiza o estudo de físico-química de soluções?",
+          "ΔG = ΔH − TΔS; μi = μi° + RT ln(ai)"
+        ],
+        [
+          "Como aplicar físico-química de soluções em um exemplo?",
+          "Se ΔH=−20 kJ/mol e ΔS=−50 J/(mol·K), a 298 K, ΔG≈−20−298×(−0,050)=−5,1 kJ/mol. Sob temperatura e pressão constantes, o valor negativo favorece a direção escrita em termos de Gibbs."
+        ],
+        [
+          "O que considerar ao interpretar físico-química de soluções?",
+          "Uma reação termodinamicamente favorecida não precisa ocorrer rapidamente; velocidade depende da cinética e das barreiras de ativação."
+        ]
+      ]
+    },
+    {
+      "area": "Química fundamental",
+      "title": "Química Analítica Instrumental",
+      "lead": "Um sinal instrumental só vira concentração após estabelecer relação com padrões adequados, faixa linear e branco analítico. A calibração pode ser externa, por adição padrão ou por padrão interno, dependendo de matriz e interferências. Rastreabilidade requer registro de padrões, preparo, diluições, condições do instrumento e resultados; uma curva com bom coeficiente de determinação não basta para comprovar exatidão.",
+      "paragraphs": [
+        "Cromatografia separa componentes com base em suas interações relativas entre fases, enquanto espectrometria mede uma resposta vinculada a absorção, emissão ou massa. Limite de detecção e limite de quantificação têm significados diferentes. A precisão entre replicatas não garante ausência de viés sistemático; materiais de referência e recuperações ajudam a avaliar exatidão e efeito de matriz.",
+        "Uma reta de calibração deve cobrir a faixa de concentração estudada e ser acompanhada de branco, padrões e replicatas. A comparação de resíduos ajuda a identificar curvatura ou heterocedasticidade que um R² alto esconde. Para efeito de matriz, considere adição padrão ou padrão interno com justificativa do método. Os limites de detecção e quantificação não substituem a avaliação de exatidão.",
+        "Etapas de filtração, extração e diluição podem alterar o teor medido. Registre volumes e massas em cada transferência e use fator de diluição apenas quando o procedimento o sustentar. Um padrão de recuperação adicionado antes do preparo ajuda a investigar perdas. Resultados abaixo do limite de quantificação devem ser comunicados de acordo com o método, não apresentados como zero exato."
+      ],
+      "formula": "A = εbc (Beer–Lambert em faixa válida); Cfinal = Cdiluída × fator de diluição",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Uma amostra diluída dez vezes fornece 4,0 mg/L pela curva de calibração. Na ausência de perdas, a amostra original contém 40 mg/L. O resultado deve carregar a incerteza apropriada e não ultrapassar a faixa confiável do método.",
+      "pitfall": "Concentração negativa estimada em uma reta de calibração não representa concentração física negativa; examine branco, ruído, faixa e modelo de calibração.",
+      "cards": [
+        [
+          "Por que o padrão interno ajuda em determinados métodos?",
+          "Ele corrige parte das variações de injeção, preparo ou resposta quando acompanha o analito de maneira adequada."
+        ],
+        [
+          "Uma solução original foi diluída 1:20 e a leitura confiável resultou em 2,5 mg/L. Qual concentração original?",
+          "C_original=2,5×20=50 mg/L, se não houver perdas ou transformações durante o preparo. A incerteza da calibração e da diluição deve ser considerada."
+        ],
+        [
+          "Por que R² alto não prova ausência de interferências?",
+          "Ele mede ajuste estatístico no conjunto de padrões, não seletividade, viés da amostra, efeito de matriz ou rastreabilidade."
+        ],
+        [
+          "Qual relação organiza o estudo de química analítica instrumental?",
+          "A = εbc (Beer–Lambert em faixa válida); Cfinal = Cdiluída × fator de diluição"
+        ],
+        [
+          "Como aplicar química analítica instrumental em um exemplo?",
+          "Uma amostra diluída dez vezes fornece 4,0 mg/L pela curva de calibração. Na ausência de perdas, a amostra original contém 40 mg/L. O resultado deve carregar a incerteza apropriada e não ultrapassar a faixa confiável do método."
+        ],
+        [
+          "O que considerar ao interpretar química analítica instrumental?",
+          "Concentração negativa estimada em uma reta de calibração não representa concentração física negativa; examine branco, ruído, faixa e modelo de calibração."
+        ]
+      ]
+    },
+    {
+      "area": "Fundamentos matemáticos",
+      "title": "Estatística e Planejamento Experimental",
+      "lead": "Média e desvio padrão descrevem aspectos distintos de uma amostra. A incerteza de uma média diminui com o número de observações independentes sob hipóteses apropriadas, mas vieses de calibração e amostragem não desaparecem com mais replicatas. Um intervalo de confiança expressa o procedimento inferencial e não a probabilidade de um parâmetro fixo variar dentro daquele intervalo após os dados terem sido observados.",
+      "paragraphs": [
+        "Experimentos com dois ou mais fatores permitem analisar efeitos principais e interações; mudar um fator por vez frequentemente perde a informação sobre interação. Aleatorização reduz associação sistemática com fatores não controlados e replicação fornece base para estimar erro experimental. Ao ajustar regressões para dados de processo, examinar resíduos, heterocedasticidade e extrapolação é tão importante quanto reportar coeficientes.",
+        "O desvio padrão amostral mede dispersão observada, enquanto erro padrão estima a variabilidade da média amostral sob hipóteses apropriadas. Aumentar replicatas reduz incerteza aleatória da média, mas não elimina calibração tendenciosa ou amostra não representativa. Reporte número de ensaios e unidades e não trate pontos não independentes como replicatas.",
+        "Em um fatorial 2², efeitos de temperatura e agitação podem interagir, de modo que o efeito de temperatura depende do nível de agitação. Planejamentos com ordem aleatorizada evitam confundir tratamento com tendência temporal, e pontos centrais ajudam a investigar curvatura. A análise de resíduos deve anteceder conclusões sobre significância ou otimização."
+      ],
+      "formula": "s = √[Σ(xi−x̄)²/(n−1)]; erro padrão da média = s/√n",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Três medidas de rendimento são 80, 82 e 84%. A média é 82% e o desvio padrão amostral é 2 pontos percentuais. A média não implica que todos os ensaios repetidos terão rendimento de 82%.",
+      "pitfall": "Correlação alta não estabelece causalidade. Em planejamento experimental, classifique controles, tratamentos, interações e número de replicatas.",
+      "cards": [
+        [
+          "Por que randomizar a ordem dos ensaios?",
+          "Para reduzir a confusão de efeitos de tratamento com tendências de tempo e fatores não controlados."
+        ],
+        [
+          "Em quatro medições 10, 12, 14 e 16, qual média e desvio padrão amostral aproximado?",
+          "A média é 13. A soma dos quadrados das diferenças é 20; s=√(20/3)≈2,58. O erro padrão da média é aproximadamente 1,29."
+        ],
+        [
+          "Por que realizar o planejamento com fatores combinados em vez de um fator por vez?",
+          "Porque a combinação permite identificar interações, que mostram quando o efeito de uma variável depende do nível de outra."
+        ],
+        [
+          "Qual relação organiza o estudo de estatística e planejamento experimental?",
+          "s = √[Σ(xi−x̄)²/(n−1)]; erro padrão da média = s/√n"
+        ],
+        [
+          "Como aplicar estatística e planejamento experimental em um exemplo?",
+          "Três medidas de rendimento são 80, 82 e 84%. A média é 82% e o desvio padrão amostral é 2 pontos percentuais. A média não implica que todos os ensaios repetidos terão rendimento de 82%."
+        ],
+        [
+          "O que considerar ao interpretar estatística e planejamento experimental?",
+          "Correlação alta não estabelece causalidade. Em planejamento experimental, classifique controles, tratamentos, interações e número de replicatas."
+        ]
+      ]
+    },
+    {
+      "area": "Fundamentos matemáticos",
+      "title": "Álgebra Linear para Processos",
+      "lead": "Matrizes organizam relações lineares entre correntes, espécies e equipamentos. Um sistema Ax=b admite solução única quando a matriz quadrada é inversível; em aplicações reais, rank e consistência são mais informativos que apenas contar equações. Equações de balanço redundantes podem reduzir o posto e impedir solução única. A análise de condicionamento indica quanto erros nos dados podem afetar as incógnitas.",
+      "paragraphs": [
+        "Em modelos lineares de processo, autovalores de uma matriz de estado informam modos de resposta e, para sistemas contínuos lineares autônomos, estabilidade assintótica exige autovalores com parte real negativa. Autovetores descrevem direções associadas aos modos. A interpretação física requer unidades, escalas de estados e validade da linearização em torno do ponto de operação.",
+        "A matriz de um conjunto de balanços organiza coeficientes das vazões ou concentrações desconhecidas. Se uma linha for combinação linear de outras, ela não acrescenta informação. A consistência deve ser verificada junto ao posto da matriz aumentada; contar equações não é suficiente. Em sistemas de grande porte, solução por fatoração evita problemas associados ao cálculo explícito da inversa.",
+        "Autovalores de matriz de estado indicam modos de evolução na vizinhança do ponto linearizado. Parte real negativa para todos os autovalores do sistema contínuo autônomo linear assegura estabilidade assintótica. Essa condição não garante que o modelo linear descreva grandes perturbações, saturação de válvulas ou mudanças de fase."
+      ],
+      "formula": "Ax=b; dx/dt=Ax+Bu",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Em dois misturadores, x+y=10 e 2x+y=16. Subtraindo as equações, x=6 e y=4. A matriz [[1,1],[2,1]] tem determinante −1, portanto fornece solução única para os dados propostos.",
+      "pitfall": "Não calcule inversas explicitamente como método padrão para sistemas grandes; fatorações e métodos numéricos apropriados são mais estáveis.",
+      "cards": [
+        [
+          "O que sugere determinante zero em uma matriz quadrada de coeficientes?",
+          "A matriz é singular; o sistema não pode ter solução única com aqueles coeficientes."
+        ],
+        [
+          "Se x+y=7 e 2x+2y=14, existe solução única?",
+          "Não. A segunda equação é o dobro da primeira; há uma equação independente para duas incógnitas. O sistema compatível tem infinitas soluções."
+        ],
+        [
+          "Por que uma matriz mal condicionada é problemática em análise de processos?",
+          "Pequenas incertezas de medição ou arredondamento podem gerar grandes mudanças na solução calculada."
+        ],
+        [
+          "Qual relação organiza o estudo de álgebra linear para processos?",
+          "Ax=b; dx/dt=Ax+Bu"
+        ],
+        [
+          "Como aplicar álgebra linear para processos em um exemplo?",
+          "Em dois misturadores, x+y=10 e 2x+y=16. Subtraindo as equações, x=6 e y=4. A matriz [[1,1],[2,1]] tem determinante −1, portanto fornece solução única para os dados propostos."
+        ],
+        [
+          "O que considerar ao interpretar álgebra linear para processos?",
+          "Não calcule inversas explicitamente como método padrão para sistemas grandes; fatorações e métodos numéricos apropriados são mais estáveis."
+        ]
+      ]
+    },
+    {
+      "area": "Fundamentos matemáticos",
+      "title": "Programação Científica",
+      "lead": "Um script de engenharia deve separar dados de entrada, modelo, solução e verificação. Definir unidades e condições de contorno reduz erros que passariam despercebidos por um programa sintaticamente correto. Funções pequenas, testes numéricos com casos conhecidos e registros de versões facilitam reproduzir resultados. Dados medidos precisam ser validados quanto a ausência, faixa física e resolução antes do cálculo.",
+      "paragraphs": [
+        "Para resolver equações não lineares, escolha método compatível com o problema, estabeleça critério de convergência e teste sensibilidade ao chute inicial. Gráficos devem identificar unidades, escala, intervalo e significado de cada curva. O resultado deve ser comparado com conservação de massa, energia ou comportamento-limite antes de ser aceito como solução física.",
+        "Um algoritmo que calcula correntes deve oferecer uma rotina independente para conferir o fechamento de massa e energia. Registre unidades, parâmetros, versão e tolerância numérica; um simples teste que verifica se a função executa sem erro não valida o resultado. Comparação com casos analíticos simples ajuda a identificar indexação de espécies e conversões incorretas.",
+        "Antes de ajustar correlações, trate valores ausentes e discrepantes sem remover pontos silenciosamente. Métodos iterativos precisam de tolerância dimensional e critério de parada que não confunda passos pequenos com resíduo adequado. Visualize resíduos em função da entrada e investigue parâmetros não identificáveis e extrapolações fora da faixa de calibração."
+      ],
+      "formula": "resíduo = ||f(x̂)||; erro relativo ≈ |xnovo−xantigo|/|xnovo|",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Uma rotina para balanço num misturador recebe F1=100 kg/h e F2=50 kg/h e retorna F=150 kg/h. O teste inclui verificar que F−F1−F2=0 dentro de tolerância numérica especificada.",
+      "pitfall": "Convergência do algoritmo não demonstra que o modelo ou os dados estão corretos; preserve casos de teste independentes das rotinas implementadas.",
+      "cards": [
+        [
+          "Por que testar o fechamento de massa após uma simulação numérica?",
+          "Para detectar soluções numericamente aceitas que violam uma restrição física de conservação."
+        ],
+        [
+          "Um script soma F1=100 e F2=70 kg/h e retorna F=169,8 kg/h. Qual resíduo de massa?",
+          "Resíduo, definido como entradas menos saída, é 100+70−169,8=0,2 kg/h. A aceitabilidade depende da tolerância e incerteza especificadas."
+        ],
+        [
+          "Por que um laço que para após pequena variação da incógnita pode não ter convergido?",
+          "O passo pode ser pequeno por escala, saturação ou derivada desfavorável, mesmo que o resíduo físico permaneça grande."
+        ],
+        [
+          "Qual relação organiza o estudo de programação científica?",
+          "resíduo = ||f(x̂)||; erro relativo ≈ |xnovo−xantigo|/|xnovo|"
+        ],
+        [
+          "Como aplicar programação científica em um exemplo?",
+          "Uma rotina para balanço num misturador recebe F1=100 kg/h e F2=50 kg/h e retorna F=150 kg/h. O teste inclui verificar que F−F1−F2=0 dentro de tolerância numérica especificada."
+        ],
+        [
+          "O que considerar ao interpretar programação científica?",
+          "Convergência do algoritmo não demonstra que o modelo ou os dados estão corretos; preserve casos de teste independentes das rotinas implementadas."
+        ]
+      ]
+    },
+    {
+      "area": "Fundamentos matemáticos",
+      "title": "Desenho Técnico e Fluxogramas",
+      "lead": "O diagrama de blocos mostra operações principais e fluxos de forma simplificada. Um fluxograma de processo (PFD) agrega equipamentos, correntes e condições relevantes, enquanto um diagrama de tubulação e instrumentação (P&ID) detalha válvulas, linhas, sensores e lógica representada de modo convencionado. Cada desenho atende a uma pergunta diferente e deve indicar revisão, legenda e limites de escopo.",
+      "paragraphs": [
+        "Números de linhas, identificação de equipamentos e tags de instrumentos devem ser consistentes entre documentos. A revisão de um fluxograma precisa acompanhar alterações de projeto e fornecer trilha verificável; um desenho bonito com conexões incorretas é tecnicamente inadequado. Em situações de segurança, distinções entre válvulas de controle, isolamento e alívio não podem ser apagadas por uma simbologia genérica.",
+        "Identificações de equipamentos, tubulações e instrumentos precisam concordar entre PFD, P&ID e lista de linhas. Toda alteração relevante deve atualizar revisão, data e responsável para impedir uso de informação contraditória durante execução ou manutenção. Tags semelhantes não garantem equivalência de função; a legenda e convenção do projeto definem interpretação.",
+        "O P&ID deve distinguir válvulas de controle, bloqueio, retenção e alívio, além de localização e sinais dos instrumentos. Um símbolo inadequado pode ocultar uma salvaguarda crítica. O documento não substitui cálculo mecânico ou procedimento operacional, mas serve como referência para análises como HAZOP e revisão de operação."
+      ],
+      "formula": "PFD: equipamentos + correntes; P&ID: linhas + válvulas + instrumentação",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Em um sistema de tanque com bomba e trocador, o PFD mostra tanque, bomba, trocador e vazões principais. O P&ID acrescenta identificações de linhas, válvulas de bloqueio, medidores de temperatura, pressão e estratégias de atuação, conforme o nível do projeto.",
+      "pitfall": "Um fluxograma não substitui procedimento operacional nem desenho mecânico detalhado. Indique sempre a versão do documento e as convenções utilizadas.",
+      "cards": [
+        [
+          "Qual é a principal diferença entre PFD e P&ID?",
+          "O PFD prioriza a visão de processo; o P&ID detalha tubulações, válvulas e instrumentação."
+        ],
+        [
+          "Um PFD mostra dois tanques, bomba e trocador. O que será acrescentado no P&ID?",
+          "Identificação de linhas, válvulas, instrumentos de medição e controle, intertravamentos e conexões pertinentes, conforme o escopo do projeto."
+        ],
+        [
+          "Por que não se deve construir ou operar usando uma revisão antiga do P&ID?",
+          "Porque mudanças em dispositivos, isolamento e intertravamentos podem não estar representadas, criando divergência entre documento e instalação."
+        ],
+        [
+          "Qual relação organiza o estudo de desenho técnico e fluxogramas?",
+          "PFD: equipamentos + correntes; P&ID: linhas + válvulas + instrumentação"
+        ],
+        [
+          "Como aplicar desenho técnico e fluxogramas em um exemplo?",
+          "Em um sistema de tanque com bomba e trocador, o PFD mostra tanque, bomba, trocador e vazões principais. O P&ID acrescenta identificações de linhas, válvulas de bloqueio, medidores de temperatura, pressão e estratégias de atuação, conforme o nível do projeto."
+        ],
+        [
+          "O que considerar ao interpretar desenho técnico e fluxogramas?",
+          "Um fluxograma não substitui procedimento operacional nem desenho mecânico detalhado. Indique sempre a versão do documento e as convenções utilizadas."
+        ]
+      ]
+    },
+    {
+      "area": "Química e materiais",
+      "title": "Química Inorgânica de Materiais",
+      "lead": "A distribuição eletrônica ajuda a compreender estados de oxidação, raio iônico e tendência à formação de ligações. Sólidos iônicos, covalentes e metálicos apresentam propriedades distintas, mas materiais reais podem combinar tipos de ligação. A estrutura cristalina, defeitos e composição influenciam condutividade, resistência e estabilidade, fatores relevantes na seleção de materiais de equipamentos e catalisadores.",
+      "paragraphs": [
+        "Complexos de metais de transição apresentam geometrias e estados de oxidação que modificam solubilidade e reatividade. Em corrosão eletroquímica, regiões anódicas e catódicas permitem reações acopladas, não apenas dissolução uniforme de um metal. A escolha de ligas, revestimentos e condições de operação deve considerar temperatura, pH, potencial e presença de agentes agressivos; um material resistente em água pura pode falhar em meio cloretado.",
+        "Íons de metais de transição podem formar complexos com diferentes números de coordenação e geometrias, alterando propriedades espectrais e reatividade. A formação de ligantes pode estabilizar certos estados de oxidação, mas a seletividade catalítica depende do mecanismo, do meio e das condições. Identifique espécie, carga total e estado de oxidação antes de prever reatividade.",
+        "Pites e corrosão galvânica não se resumem à dissolução homogênea. O contato elétrico entre metais diferentes em eletrólito pode favorecer uma região anódica, dependendo dos potenciais e das áreas relativas. Avaliar apenas a composição da liga sem considerar cloretos, oxigênio, pH e temperatura pode levar a uma escolha insegura para equipamento."
+      ],
+      "formula": "Fe → Fe²⁺ + 2e⁻ (semirreação de oxidação idealizada)",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Em um processo corrosivo, cada mol de ferro metálico oxidado a Fe²⁺ libera dois mols de elétrons. Para 0,5 mol de Fe, a semirreação corresponde a 1 mol de elétrons, sem descrever sozinha a taxa ou a reação catódica.",
+      "pitfall": "Estado de oxidação formal não equivale necessariamente a carga localizada no átomo; corrosão exige reações de oxidação e redução acopladas.",
+      "cards": [
+        [
+          "Por que a presença de cloretos pode agravar a corrosão localizada de algumas ligas?",
+          "Porque pode comprometer filmes passivos em condições suscetíveis, favorecendo ataque localizado."
+        ],
+        [
+          "Se um íon Fe²⁺ se oxida a Fe³⁺, quantos elétrons por mol de íons são transferidos?",
+          "Um mol de Fe²⁺ libera um mol de elétrons na semirreação Fe²⁺→Fe³⁺+e⁻. O processo global exige uma reação de redução acoplada."
+        ],
+        [
+          "Por que dois metais resistentes separadamente podem corroer quando acoplados?",
+          "Em meio condutor, o par galvânico pode estabelecer correntes e polarizar um material anodicamente, dependendo das condições eletroquímicas."
+        ],
+        [
+          "Qual relação organiza o estudo de química inorgânica de materiais?",
+          "Fe → Fe²⁺ + 2e⁻ (semirreação de oxidação idealizada)"
+        ],
+        [
+          "Como aplicar química inorgânica de materiais em um exemplo?",
+          "Em um processo corrosivo, cada mol de ferro metálico oxidado a Fe²⁺ libera dois mols de elétrons. Para 0,5 mol de Fe, a semirreação corresponde a 1 mol de elétrons, sem descrever sozinha a taxa ou a reação catódica."
+        ],
+        [
+          "O que considerar ao interpretar química inorgânica de materiais?",
+          "Estado de oxidação formal não equivale necessariamente a carga localizada no átomo; corrosão exige reações de oxidação e redução acopladas."
+        ]
+      ]
+    },
+    {
+      "area": "Operações e transformações",
+      "title": "Termodinâmica Aplicada a Processos",
+      "lead": "Equações de estado aproximam relações entre pressão, volume e temperatura. Gás ideal é referência conveniente em baixa densidade, mas misturas comprimidas e vapor próximo à saturação podem exigir modelos cúbicos ou dados experimentais. O fator de compressibilidade Z compara o volume molar real com RT/P. Parâmetros de interação e regras de mistura afetam previsão de propriedades e devem ser selecionados conforme componentes e pressão.",
+      "paragraphs": [
+        "Em um cálculo flash a temperatura e pressão definidas, balanços materiais se combinam com relações de equilíbrio yi=Kixi. A fração vaporizada deve ficar entre zero e um para uma solução bifásica física. K depende do modelo termodinâmico, portanto estimar K por uma relação ideal sem verificar atividade e fugacidade pode distorcer o resultado. O balanço global não permite determinar todas as composições sem informações de equilíbrio independentes.",
+        "Os valores K_i=y_i/x_i são definidos pelo equilíbrio e pelo modelo de fugacidade e atividade adotado. Na equação de Rachford–Rice, descarte raízes que produzam fração vaporizada fora de [0,1] em um flash bifásico ou composições negativas. O resultado depende de pressão e temperatura, portanto não se deve transportar um K constante para toda a coluna sem justificativa.",
+        "Modelos cúbicos podem estimar propriedades de hidrocarbonetos sob certas condições, mas misturas associativas ou altamente polares frequentemente exigem tratamentos específicos. Compare previsão do modelo com dados confiáveis de vapor–líquido e propriedades térmicas, documentando parâmetros binários. Coerência entre referência de entalpia e modelo de equilíbrio é crucial para balanços de calor."
+      ],
+      "formula": "Σ zi(Ki−1)/(1+β(Ki−1)) = 0 (Rachford–Rice)",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Em mistura binária com zA=0,5, KA=2 e KB=0,5, a relação Rachford–Rice dá β=0,5. Assim xA=0,5/[1+0,5(2−1)]=1/3 e yA=2/3, com xB=2/3 e yB=1/3.",
+      "pitfall": "A existência de raiz matemática não garante viabilidade bifásica; verifique domínio de β, positividade de composições e estabilidade da fase.",
+      "cards": [
+        [
+          "Qual informação adicional ao balanço material é necessária para um flash?",
+          "Relações termodinâmicas de equilíbrio entre as fases, válidas para a mistura."
+        ],
+        [
+          "Para um composto com x=0,30 e K=2, qual fração de vapor em equilíbrio y?",
+          "Pela definição K=y/x, resulta y=0,60. Em mistura multicomponente, todas as frações devem ainda somar um, e a composição é avaliada simultaneamente."
+        ],
+        [
+          "Por que K_i não deve ser fixado em todas as temperaturas?",
+          "O equilíbrio líquido-vapor e as fugacidades dependem da temperatura, pressão e composição, modificando a distribuição entre fases."
+        ],
+        [
+          "Qual relação organiza o estudo de termodinâmica aplicada a processos?",
+          "Σ zi(Ki−1)/(1+β(Ki−1)) = 0 (Rachford–Rice)"
+        ],
+        [
+          "Como aplicar termodinâmica aplicada a processos em um exemplo?",
+          "Em mistura binária com zA=0,5, KA=2 e KB=0,5, a relação Rachford–Rice dá β=0,5. Assim xA=0,5/[1+0,5(2−1)]=1/3 e yA=2/3, com xB=2/3 e yB=1/3."
+        ],
+        [
+          "O que considerar ao interpretar termodinâmica aplicada a processos?",
+          "A existência de raiz matemática não garante viabilidade bifásica; verifique domínio de β, positividade de composições e estabilidade da fase."
+        ]
+      ]
+    },
+    {
+      "area": "Operações e transformações",
+      "title": "Balanços com Reações Químicas",
+      "lead": "A extensão de reação permite expressar variações molares por coeficientes estequiométricos, preservando sinais para reagentes e produtos. Em reações paralelas ou em série, uma extensão por reação independente é necessária. Conversão de reagente não informa sozinha quanto do reagente virou produto desejado; seletividade e rendimento dependem da definição adotada e dos caminhos de reação. Balanços atômicos são uma verificação independente útil.",
+      "paragraphs": [
+        "O balanço de energia com reação pode ser formulado por entalpias de formação ou calor de reação e contribuições sensíveis, desde que não haja dupla contagem. Um sinal negativo para entalpia padrão de reação corresponde a reação exotérmica no sentido especificado. Mudanças de temperatura alteram entalpia de reação segundo as capacidades térmicas dos produtos e reagentes; o valor a 298 K não deve ser aplicado automaticamente em ampla faixa.",
+        "Cada reação estequiometricamente independente recebe extensão própria. Em reações paralelas, um reagente pode alimentar vários produtos e o balanço de espécie precisa contabilizar todos os caminhos. A massa total se conserva, mas os mols totais podem aumentar ou diminuir. Compare o balanço atômico com o balanço molar para identificar erros no sinal do coeficiente estequiométrico.",
+        "A entalpia de reação pode ser calculada por entalpias de formação em temperatura de referência e corrigida por contribuições de calor específico. Não some novamente calor de formação se já utilizou entalpias absolutas referidas à mesma base; isso duplicaria a reação no balanço energético. Reação exotérmica pode aquecer o produto mesmo sem aquecimento externo."
+      ],
+      "formula": "ni,out = ni,in + Σνij ξj; ΔHr°=Σνi ΔHf,i°",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Na reação A→2B, alimentação de 10 mol de A com extensão ξ=3 mol resulta em 7 mol de A e 6 mol de B na saída. O número total de mols aumenta de 10 para 13, embora a massa total se conserve se a estequiometria for consistente.",
+      "pitfall": "A conservação de massa total continua válida; conservação do número total de mols não é princípio geral quando a reação altera a soma dos coeficientes.",
+      "cards": [
+        [
+          "Por que um balanço de espécie inclui geração e consumo?",
+          "Porque a reação transforma componentes, embora preserve a massa total do sistema fechado à matéria."
+        ],
+        [
+          "A→2B recebe 12 mol de A e reage com extensão de 5 mol. Qual a saída?",
+          "A sai com 12−5=7 mol e B é formado em 10 mol, assumindo ausência inicial de B. Os mols totais mudam, mas a massa continua conservada quando as massas molares respeitam a equação."
+        ],
+        [
+          "Por que conversão de A não fixa rendimento de B numa reação paralela?",
+          "Porque parte de A pode formar outros produtos, exigindo seletividade ou extensões independentes para conhecer B."
+        ],
+        [
+          "Qual relação organiza o estudo de balanços com reações químicas?",
+          "ni,out = ni,in + Σνij ξj; ΔHr°=Σνi ΔHf,i°"
+        ],
+        [
+          "Como aplicar balanços com reações químicas em um exemplo?",
+          "Na reação A→2B, alimentação de 10 mol de A com extensão ξ=3 mol resulta em 7 mol de A e 6 mol de B na saída. O número total de mols aumenta de 10 para 13, embora a massa total se conserve se a estequiometria for consistente."
+        ],
+        [
+          "O que considerar ao interpretar balanços com reações químicas?",
+          "A conservação de massa total continua válida; conservação do número total de mols não é princípio geral quando a reação altera a soma dos coeficientes."
+        ]
+      ]
+    },
+    {
+      "area": "Fenômenos de transporte",
+      "title": "Transferência de Quantidade de Movimento",
+      "lead": "Em fluidos newtonianos, tensão viscosa é proporcional ao gradiente de velocidade local, com sinal dependente da convenção geométrica. Viscosidade dinâmica e cinemática têm unidades distintas, e sua dependência com temperatura costuma ser importante em líquidos. O perfil de velocidade não deve ser deduzido somente da vazão: geometria, condição de não deslizamento e distribuição de pressão determinam o campo.",
+      "paragraphs": [
+        "A camada-limite resulta do efeito viscoso próximo a superfícies em escoamentos externos. A transição para turbulência depende de perturbações e geometria, não de um único Reynolds universal. Em tubos plenamente desenvolvidos, o balanço diferencial de quantidade de movimento fornece distribuições de cisalhamento e velocidade. O conceito de fluxo de momento conecta escoamento interno, mistura e transferência de calor.",
+        "Em tubo laminar plenamente desenvolvido, o gradiente radial de velocidade gera tensão viscosa que equilibra a força de pressão aplicada ao fluido. A tensão junto à parede pode ser relacionada à perda de pressão. Não confunda distribuição de tensão com distribuição de velocidade: uma pode variar linearmente no raio enquanto a outra é parabólica sob condições específicas.",
+        "Ao escalar escoamento externo, Reynolds e rugosidade relativa influenciam distribuição de velocidades, arrasto e separação da camada-limite. Copiar apenas a velocidade de um protótipo não reproduz o mesmo regime quando comprimento e viscosidade mudam. Em fluidos não newtonianos, a viscosidade aparente pode depender da taxa de deformação e deve ser modelada adequadamente."
+      ],
+      "formula": "τxy = μ ∂vx/∂y; ν=μ/ρ",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Um líquido com μ=0,004 Pa·s e gradiente local de velocidade de 50 s⁻¹ tem tensão cisalhante de módulo 0,20 Pa. Esse cálculo local não informa a perda total de carga de uma tubulação sem integrar a distribuição.",
+      "pitfall": "Em fluidos não newtonianos, o quociente τ/γ̇ não representa obrigatoriamente viscosidade constante. Não aplique solução de Poiseuille sem verificar regime e geometria.",
+      "cards": [
+        [
+          "Qual o significado físico da condição de não deslizamento?",
+          "A velocidade do fluido junto à superfície coincide com a velocidade dessa superfície nas condições em que a hipótese é válida."
+        ],
+        [
+          "Um fluido newtoniano de μ=0,002 Pa·s apresenta du/dy=120 s⁻¹. Qual |τ|?",
+          "Pela relação constitutiva, módulo da tensão de cisalhamento é μ|du/dy|=0,24 Pa. O sinal depende da orientação dos eixos e da definição da tensão."
+        ],
+        [
+          "Por que igualdade de velocidade não garante semelhança dinâmica entre escoamentos?",
+          "Porque razão de inércia e viscosidade também depende de dimensão característica, densidade e viscosidade, reunidas no Reynolds."
+        ],
+        [
+          "Qual relação organiza o estudo de transferência de quantidade de movimento?",
+          "τxy = μ ∂vx/∂y; ν=μ/ρ"
+        ],
+        [
+          "Como aplicar transferência de quantidade de movimento em um exemplo?",
+          "Um líquido com μ=0,004 Pa·s e gradiente local de velocidade de 50 s⁻¹ tem tensão cisalhante de módulo 0,20 Pa. Esse cálculo local não informa a perda total de carga de uma tubulação sem integrar a distribuição."
+        ],
+        [
+          "O que considerar ao interpretar transferência de quantidade de movimento?",
+          "Em fluidos não newtonianos, o quociente τ/γ̇ não representa obrigatoriamente viscosidade constante. Não aplique solução de Poiseuille sem verificar regime e geometria."
+        ]
+      ]
+    },
+    {
+      "area": "Operações e transformações",
+      "title": "Separações Mecânicas",
+      "lead": "A velocidade terminal de uma partícula decorre do equilíbrio entre peso aparente e arrasto. A lei de Stokes é aproximação para baixos Reynolds de partícula e esferas isoladas em fluido newtoniano. Em suspensões concentradas, a sedimentação prejudicada altera o comportamento coletivo, tornando inadequada a extrapolação direta da velocidade de partícula isolada.",
+      "paragraphs": [
+        "Na filtração por torta, a resistência total combina meio filtrante e torta acumulada. A relação vazão–pressão varia conforme compressibilidade, concentração de sólidos e propriedades do filtrado. Em escala industrial, mudança de viscosidade e distribuição granulométrica pode afetar drasticamente o tempo de ciclo. Ensaios de bancada ajudam a estimar parâmetros, mas requerem conversão cuidadosa de área e massa de sólidos.",
+        "O crescimento de torta eleva a resistência hidráulica, reduzindo a vazão para pressão constante. A equação de Darcy aplicada à torta exige viscosidade, área, massa de sólidos e resistividade específica adequados; tortas compressíveis podem alterar resistência com pressão. A etapa de lavagem é diferente da formação, pois líquido de lavagem atravessa estrutura já formada.",
+        "Velocidade de sedimentação depende do diâmetro e densidade de partículas, viscosidade e regime de arrasto. Uma suspensão concentrada sofre interações e sedimentação prejudicada, tornando inadequada a equação de Stokes de partícula isolada. Verifique floculação, agregação e mudanças de distribuição granulométrica durante ensaios de bancada."
+      ],
+      "formula": "vStokes = (ρp−ρf)g dp²/(18 μ) em Re_p pequeno",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Uma partícula esférica com diferença de densidade de 1000 kg/m³, diâmetro de 100 μm e fluido de μ=0,001 Pa·s tem v≈0,00545 m/s pela lei de Stokes. É preciso verificar o Reynolds calculado para validar o regime.",
+      "pitfall": "Não use Stokes em qualquer tamanho de partícula e não interprete clarificação por sedimentação como remoção de substâncias dissolvidas.",
+      "cards": [
+        [
+          "Por que o tempo de filtração pode aumentar à medida que a torta cresce?",
+          "Porque a resistência hidráulica adicional da torta reduz vazão a pressão mantida."
+        ],
+        [
+          "Se velocidade de Stokes é proporcional a d², o que ocorre quando diâmetro dobra?",
+          "Mantidas densidades, viscosidade e validade de Reynolds pequeno, a velocidade terminal cresce quatro vezes. A hipótese pode deixar de valer após aumento do diâmetro."
+        ],
+        [
+          "Por que aumentar a pressão não aumenta sempre linearmente a vazão de filtração?",
+          "Porque a torta pode se comprimir, elevando sua resistência, e o meio/fluido possuem limitações hidráulicas."
+        ],
+        [
+          "Qual relação organiza o estudo de separações mecânicas?",
+          "vStokes = (ρp−ρf)g dp²/(18 μ) em Re_p pequeno"
+        ],
+        [
+          "Como aplicar separações mecânicas em um exemplo?",
+          "Uma partícula esférica com diferença de densidade de 1000 kg/m³, diâmetro de 100 μm e fluido de μ=0,001 Pa·s tem v≈0,00545 m/s pela lei de Stokes. É preciso verificar o Reynolds calculado para validar o regime."
+        ],
+        [
+          "O que considerar ao interpretar separações mecânicas?",
+          "Não use Stokes em qualquer tamanho de partícula e não interprete clarificação por sedimentação como remoção de substâncias dissolvidas."
+        ]
+      ]
+    },
+    {
+      "area": "Operações e transformações",
+      "title": "Destilação e Sistemas Multicomponentes",
+      "lead": "Em colunas multicomponentes, volatilidades relativas variam com composição, temperatura e pressão. Os componentes-chave definem restrições de separação, mas componentes leves e pesados não-chave também participam dos balanços. Métodos abreviados como Fenske, Underwood e Gilliland fornecem estimativas preliminares sujeitas a hipóteses. O cálculo rigoroso combina balanços de massa, energia, somatórios e relações de equilíbrio em cada estágio.",
+      "paragraphs": [
+        "Alterar refluxo muda tráfego interno de vapor e líquido e, portanto, consumo térmico e hidráulica da coluna. Operar a pressão diferente desloca o equilíbrio e as temperaturas, podendo favorecer ou prejudicar separação e utilidades. Além de pureza de produtos, o projeto deve avaliar flooding, weeping, eficiência de pratos, perdas de carga e sensibilidade da coluna a perturbações.",
+        "Em uma mistura de vários compostos, selecionar chave leve e chave pesada permite estabelecer especificações de recuperação em produtos. A composição e a volatilidade relativa dos não-chave influenciam os balanços e os perfis. Estimativas rápidas por Fenske–Underwood–Gilliland exigem hipóteses; só uma simulação rigorosa ou dados validados verifica não idealidade e cargas térmicas reais.",
+        "Excesso de vapor pode provocar inundação ou arraste, enquanto vapor insuficiente pode prejudicar contato em certos pratos. Recheio e pratos apresentam limites hidráulicos e eficiência dependente de líquido, vapor e propriedades. Reduzir pressão pode favorecer volatilidade, mas influencia volume de vapor, temperatura, sistema de vácuo e dimensionamento mecânico."
+      ],
+      "formula": "MESH: Material balances, Equilibrium, Summation, Heat balances",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Um cálculo abreviado sugere 15 estágios teóricos e uma razão de refluxo operacional. Esse número não especifica 15 pratos reais: a eficiência global e o tipo de contato precisam ser considerados no projeto detalhado.",
+      "pitfall": "A volatilidade relativa não é constante em todas as misturas. Sistemas azeotrópicos ou altamente não ideais requerem modelagem apropriada.",
+      "cards": [
+        [
+          "Por que número de estágios teóricos difere de número de pratos instalados?",
+          "Porque contatos reais não atingem, em geral, o equilíbrio perfeito assumido no estágio teórico."
+        ],
+        [
+          "Uma coluna recebe 200 kmol/h, com 30% de A; D=60 kmol/h a 80% de A. Qual fração de A no fundo?",
+          "Entram 60 kmol/h de A; destilado retira 48. Fundo B=140 kmol/h contém 12 de A, logo x_B=12/140≈0,0857."
+        ],
+        [
+          "Por que McCabe–Thiele binário não dimensiona diretamente uma coluna multicomponente rigorosa?",
+          "Porque múltiplos equilíbrios, balanços energéticos e perfis de composição exigem relações adicionais por estágio."
+        ],
+        [
+          "Qual relação organiza o estudo de destilação e sistemas multicomponentes?",
+          "MESH: Material balances, Equilibrium, Summation, Heat balances"
+        ],
+        [
+          "Como aplicar destilação e sistemas multicomponentes em um exemplo?",
+          "Um cálculo abreviado sugere 15 estágios teóricos e uma razão de refluxo operacional. Esse número não especifica 15 pratos reais: a eficiência global e o tipo de contato precisam ser considerados no projeto detalhado."
+        ],
+        [
+          "O que considerar ao interpretar destilação e sistemas multicomponentes?",
+          "A volatilidade relativa não é constante em todas as misturas. Sistemas azeotrópicos ou altamente não ideais requerem modelagem apropriada."
+        ]
+      ]
+    },
+    {
+      "area": "Operações e transformações",
+      "title": "Absorção, Extração e Stripping",
+      "lead": "Na absorção de um componente gasoso em líquido, a força motriz relaciona concentrações de cada fase às composições de equilíbrio. A resistência global pode estar distribuída entre filmes gasoso e líquido, dependendo de solubilidade e cinética de reação. O método de unidades de transferência (NTU/HTU) permite estimar altura de recheio quando as hipóteses de contato, vazões e coeficientes são adequadas.",
+      "paragraphs": [
+        "Na extração líquido-líquido, o solvente deve favorecer a distribuição do soluto e permitir separação posterior das fases. Coeficiente de distribuição e seletividade não são sinônimos: a seletividade compara a preferência relativa entre componentes. Diagramas de equilíbrio ternário delimitam região bifásica, tie-lines e composição das fases. Mistura intensa melhora contato, mas pode dificultar a decantação devido à formação de emulsões.",
+        "Em absorção gás-líquido, a composição real no seio das fases difere da composição de equilíbrio local; a distância à curva de equilíbrio fornece a força motriz. Uma pinça pode exigir altura ou estágios elevados, e alterações de vazão do solvente mudam inclinação da linha operacional. Cuidado para não misturar bases molares total e livre de soluto sem conversão.",
+        "Diagramas triangulares representam regiões de uma ou duas fases e linhas de amarração com composições de extrato e refinado. A escolha de solvente deve considerar distribuição do soluto, miscibilidade, viscosidade, recuperação e segurança. Adicionar muito solvente não garante economia: o solvente precisa ser recuperado e pode contaminar fases."
+      ],
+      "formula": "N_A = K_G (y_A−y_A*); N_A = K_L (x_A*−x_A)",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Se gás contém 0,10 de soluto e o equilíbrio correspondente ao líquido é y*=0,04, a força motriz na base gasosa é 0,06 em fração molar. O fluxo depende de K_G e da definição coerente da força motriz.",
+      "pitfall": "Evite combinar coeficientes globais e forças motrizes em bases diferentes. O balanço de componentes e a relação de equilíbrio precisam ser compatíveis.",
+      "cards": [
+        [
+          "Por que a extração pode ser vantajosa em separações difíceis por destilação?",
+          "Porque um solvente pode fornecer seletividade mesmo quando volatilidades relativas são insuficientes."
+        ],
+        [
+          "Se y_A=0,12 no gás e y*_A=0,05 para o líquido, qual força motriz na base gasosa?",
+          "A diferença y−y*=0,07 em fração molar. O fluxo só é obtido ao multiplicar pelo coeficiente global na mesma base e verificar as unidades."
+        ],
+        [
+          "Por que coeficiente de distribuição alto não basta para selecionar solvente?",
+          "Porque seletividade, imiscibilidade, recuperação energética, toxicidade e propriedades operacionais também limitam a extração."
+        ],
+        [
+          "Qual relação organiza o estudo de absorção, extração e stripping?",
+          "N_A = K_G (y_A−y_A*); N_A = K_L (x_A*−x_A)"
+        ],
+        [
+          "Como aplicar absorção, extração e stripping em um exemplo?",
+          "Se gás contém 0,10 de soluto e o equilíbrio correspondente ao líquido é y*=0,04, a força motriz na base gasosa é 0,06 em fração molar. O fluxo depende de K_G e da definição coerente da força motriz."
+        ],
+        [
+          "O que considerar ao interpretar absorção, extração e stripping?",
+          "Evite combinar coeficientes globais e forças motrizes em bases diferentes. O balanço de componentes e a relação de equilíbrio precisam ser compatíveis."
+        ]
+      ]
+    },
+    {
+      "area": "Operações e transformações",
+      "title": "Secagem e Umidificação",
+      "lead": "Umidade absoluta do ar úmido, umidade relativa e temperatura de bulbo úmido representam propriedades diferentes. Balanços em secadores frequentemente são formulados em base de ar seco para simplificar cálculos quando essa massa se conserva. A umidade do sólido pode ser expressa em base úmida ou seca; confundir as definições distorce a carga de água a remover e as estimativas energéticas.",
+      "paragraphs": [
+        "Uma curva típica apresenta fase de taxa aproximadamente constante em certas condições e período de taxa decrescente controlado por migração interna da umidade. A transição depende da estrutura do material, das condições do ar e da geometria. Tempo de residência e temperatura máxima precisam respeitar degradação, segurança e qualidade do produto, especialmente em materiais termossensíveis.",
+        "Umidade em base úmida divide água pela massa total, enquanto base seca divide água pela massa de sólido seco. A massa de sólido não volátil pode ser utilizada como base constante ao longo de secagem, o que facilita balanço. Calcular redução percentual diretamente nas duas bases gera erro, principalmente ao aproximar baixa umidade.",
+        "O regime de taxa constante é possível quando superfície permanece efetivamente molhada e condições externas governam transferência; posteriormente, difusão interna e estrutura do sólido podem controlar remoção. Elevar temperatura pode acelerar secagem, mas degradar produto e aumentar risco de ignição de pós. Avalie energia de vaporização, exaustão e umidade do ar."
+      ],
+      "formula": "Xbase seca = mágua / msólido seco; Xbase úmida = mágua / mtotal",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Um material tem 100 kg com 20% de água em base úmida. Contém 20 kg de água e 80 kg de sólido seco. A umidade em base seca é 20/80=0,25 kg de água/kg de sólido seco.",
+      "pitfall": "Não introduza umidade relativa do gás no lugar de razão de umidade em balanços materiais; as grandezas têm bases diferentes.",
+      "cards": [
+        [
+          "Por que se usa massa de ar seco como base em muitos cálculos psicrométricos?",
+          "Porque a quantidade de ar seco costuma conservar-se enquanto a quantidade de vapor varia."
+        ],
+        [
+          "Um sólido de 120 kg contém 25% de umidade em base úmida. Qual massa de água?",
+          "Há 30 kg de água e 90 kg de sólido seco. A umidade correspondente em base seca é 30/90=0,333 kg/kg sólido seco."
+        ],
+        [
+          "Por que não é adequado usar a porcentagem de umidade em base úmida no lugar da base seca?",
+          "Os denominadores diferem e mudam ao longo da secagem; a mesma amostra tem valores numéricos distintos nas duas bases."
+        ],
+        [
+          "Qual relação organiza o estudo de secagem e umidificação?",
+          "Xbase seca = mágua / msólido seco; Xbase úmida = mágua / mtotal"
+        ],
+        [
+          "Como aplicar secagem e umidificação em um exemplo?",
+          "Um material tem 100 kg com 20% de água em base úmida. Contém 20 kg de água e 80 kg de sólido seco. A umidade em base seca é 20/80=0,25 kg de água/kg de sólido seco."
+        ],
+        [
+          "O que considerar ao interpretar secagem e umidificação?",
+          "Não introduza umidade relativa do gás no lugar de razão de umidade em balanços materiais; as grandezas têm bases diferentes."
+        ]
+      ]
+    },
+    {
+      "area": "Operações e transformações",
+      "title": "Cristalização e Processos de Partículas",
+      "lead": "A cristalização exige criar supersaturação, mas uma solução supersaturada não precipita instantaneamente em todas as situações. Nucleação primária, secundária e crescimento cristalino respondem a mecanismos diferentes; operar com supersaturação muito alta pode formar muitos cristais pequenos em vez de partículas adequadas para filtração. Agitação, impurezas e semeadura influenciam estrutura e população de cristais.",
+      "paragraphs": [
+        "Distribuição de tamanho de partícula afeta filtração, secagem, escoamento de sólidos e propriedades do produto. O balanço populacional acompanha nucleação, crescimento, aglomeração e quebra, além dos balanços globais de massa e energia. Resfriamento e evaporação podem gerar supersaturação, mas as cargas térmicas e efeitos da concentração sobre solubilidade precisam ser analisados.",
+        "Criar supersaturação é necessário, mas a resposta depende de se a solução está na zona metaestável ou instável e de mecanismos de nucleação disponíveis. Semeadura introduz cristais que podem captar soluto e orientar a distribuição granulométrica. Controle inadequado de resfriamento pode gerar partículas muito pequenas, difíceis de filtrar e secar.",
+        "O balanço de massa determina quantidade cristalizada em função da solubilidade e do solvente, enquanto distribuição de tamanho exige informações cinéticas de nucleação e crescimento. Cristalizadores evaporativos ou por resfriamento possuem cargas energéticas distintas. A composição do licor-mãe e a pureza cristalina devem ser avaliadas separadamente."
+      ],
+      "formula": "S = C/C*; supersaturação relativa = (C−C*)/C*",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Se a concentração é C=140 g/L e a concentração de saturação C*=100 g/L na temperatura considerada, S=1,4 e a supersaturação relativa é 0,4. Isso não determina sozinho a taxa de nucleação.",
+      "pitfall": "Supersaturação é força motriz termodinâmica, não taxa de crescimento; cinética e hidrodinâmica controlam a evolução real.",
+      "cards": [
+        [
+          "Por que semear uma solução supersaturada?",
+          "Para oferecer superfícies e controlar parte da nucleação e da distribuição de cristais."
+        ],
+        [
+          "Uma solução tem 150 g/L de soluto e saturação a 100 g/L. Qual supersaturação relativa?",
+          "(150−100)/100=0,50, ou 50% na definição relativa. O número não fornece velocidade de nucleação sem dados cinéticos."
+        ],
+        [
+          "Por que duas cristalizações com mesma supersaturação podem gerar cristais distintos?",
+          "Porque temperatura, mistura, impurezas, histórico e semeadura alteram nucleação e crescimento."
+        ],
+        [
+          "Qual relação organiza o estudo de cristalização e processos de partículas?",
+          "S = C/C*; supersaturação relativa = (C−C*)/C*"
+        ],
+        [
+          "Como aplicar cristalização e processos de partículas em um exemplo?",
+          "Se a concentração é C=140 g/L e a concentração de saturação C*=100 g/L na temperatura considerada, S=1,4 e a supersaturação relativa é 0,4. Isso não determina sozinho a taxa de nucleação."
+        ],
+        [
+          "O que considerar ao interpretar cristalização e processos de partículas?",
+          "Supersaturação é força motriz termodinâmica, não taxa de crescimento; cinética e hidrodinâmica controlam a evolução real."
+        ]
+      ]
+    },
+    {
+      "area": "Operações e transformações",
+      "title": "Reatores Catalíticos e Heterogêneos",
+      "lead": "Em um catalisador poroso, a velocidade observada pode ser limitada pela cinética de superfície, pelo transporte externo ou por difusão interna. O fator de efetividade compara taxa média no pellet à taxa caso todas as regiões estivessem nas condições de superfície. Critérios de transporte são úteis para verificar se os dados cinéticos medidos representam realmente a cinética intrínseca.",
+      "paragraphs": [
+        "Leitos fixos exigem avaliar queda de pressão, distribuição de fluxo e remoção ou fornecimento de calor ao longo do comprimento. Reações exotérmicas podem criar pontos quentes que alteram seletividade e aceleram desativação. Envenenamento, coque e sinterização têm mecanismos distintos, e estratégias de regeneração precisam respeitar material e operação. Catalisador mais ativo pode não ser o melhor quando limitações térmicas dominam.",
+        "Ao medir a taxa aparente em pellets porosos, verifique se a difusão interna e o filme externo limitam acesso ao sítio ativo. Alterar tamanho de partícula e velocidade do fluido pode ajudar a distinguir mecanismos, mantendo cautela com efeitos térmicos. Fator de efetividade é definido frente a condições de superfície e não mede diretamente desativação química.",
+        "Em leitos fixos exotérmicos, a liberação de calor pode produzir pontos quentes e mudanças expressivas de conversão e seletividade. Queda de pressão afeta concentração e vazão local, especialmente para gases. O dimensionamento deve reunir cinética, equilíbrio, difusão, energia e correlação hidráulica sem inferir todo comportamento de um ensaio isotérmico."
+      ],
+      "formula": "η = taxa real/taxa sem limitação interna; ΔP estimável via Ergun",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Se um pellet produz taxa média de 0,30 mol/(kg·s), enquanto condições uniformes iguais às da superfície permitiriam 0,50, o fator de efetividade é η=0,60. Isso não distingue sozinho transporte externo de interna sem outras medidas.",
+      "pitfall": "Não interprete redução de taxa exclusivamente como perda de atividade química; transporte, temperatura e composição também podem explicar o comportamento.",
+      "cards": [
+        [
+          "O que indica fator de efetividade menor que um sob hipóteses usuais?",
+          "Que a velocidade média no interior é inferior à que ocorreria sem limitações internas nas condições de superfície."
+        ],
+        [
+          "Se taxa medida é 0,12 e taxa sem resistência interna 0,30 mol/(kg·s), qual fator de efetividade?",
+          "η=0,12/0,30=0,40, assumindo definições e condições de superfície comparáveis. A razão não elimina possível resistência externa."
+        ],
+        [
+          "Por que diminuir pellet pode alterar taxa aparente sem alterar cinética intrínseca?",
+          "A menor distância de difusão pode reduzir gradientes internos, elevando a fração de sítios efetivamente utilizada."
+        ],
+        [
+          "Qual relação organiza o estudo de reatores catalíticos e heterogêneos?",
+          "η = taxa real/taxa sem limitação interna; ΔP estimável via Ergun"
+        ],
+        [
+          "Como aplicar reatores catalíticos e heterogêneos em um exemplo?",
+          "Se um pellet produz taxa média de 0,30 mol/(kg·s), enquanto condições uniformes iguais às da superfície permitiriam 0,50, o fator de efetividade é η=0,60. Isso não distingue sozinho transporte externo de interna sem outras medidas."
+        ],
+        [
+          "O que considerar ao interpretar reatores catalíticos e heterogêneos?",
+          "Não interprete redução de taxa exclusivamente como perda de atividade química; transporte, temperatura e composição também podem explicar o comportamento."
+        ]
+      ]
+    },
+    {
+      "area": "Operações e transformações",
+      "title": "Controle Avançado de Processos",
+      "lead": "Processos com várias variáveis manipuladas e controladas apresentam interações: alterar uma válvula pode afetar pressão, vazão e composição simultaneamente. Sintonia independente de PIDs pode funcionar mal quando acoplamentos são fortes. A análise de dinâmica linearizada, ganhos relativos e perturbações permite selecionar pareamentos; a estabilidade também depende de saturação, atrasos e condições de operação.",
+      "paragraphs": [
+        "O controle preditivo usa modelo para antecipar respostas e otimizar ações em um horizonte, respeitando restrições explícitas de variáveis e atuadores. Um modelo inadequado pode induzir desempenho ruim mesmo quando o otimizador converge. Em processos reais, estimação de estados, filtro de ruído, manutenção de instrumentos e tratamento de saturação são tão importantes quanto o algoritmo escolhido.",
+        "Em processos multivariáveis, uma alteração em vapor para aquecimento pode afetar temperatura e pressão, enquanto uma mudança de vazão pode alterar composição e nível. Parear variáveis manipuladas e controladas exige avaliar sinais, tempos e interações, não somente o maior ganho estático. Restrições e saturações criam comportamento não linear próximo às bordas.",
+        "Controle preditivo minimiza um custo em horizonte futuro sujeito a limites e dinâmica estimada. A solução pode ficar numericamente ótima para modelo inadequado e produzir desempenho ruim na planta. Recomenda-se conferir rastreamento do estado, ruído de sensor, restrições de taxa de válvulas e robustez a perturbações; a malha não substitui salvaguardas independentes."
+      ],
+      "formula": "Modelo discreto: x(k+1)=Ax(k)+Bu(k); y(k)=Cx(k)",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Uma malha de temperatura tem atraso de 4 min e constante de tempo de 10 min. Ignorar o atraso em uma sintonia agressiva pode produzir oscilações; uma estratégia preditiva considera o atraso conhecido e as limitações do atuador.",
+      "pitfall": "Uma estratégia de controle não substitui intertravamentos independentes de segurança. Nunca trate a otimização de setpoints como barreira de proteção.",
+      "cards": [
+        [
+          "Por que considerar limites físicos dos atuadores no controle preditivo?",
+          "Porque a solução do controle deve ser implementável sem exigir movimentos ou valores além da capacidade dos equipamentos."
+        ],
+        [
+          "Uma malha tem limite de abertura de válvula entre 10% e 90%. O que fazer se otimizador pedir 110%?",
+          "A ação é inviável. O controle deve incorporar o limite como restrição e resolver o compromisso entre referências e capacidade, considerando efeito sobre outras variáveis."
+        ],
+        [
+          "Por que sintonizar malhas isoladamente pode falhar em processos acoplados?",
+          "Porque o movimento de uma variável manipulada afeta mais de uma saída, fazendo malhas competirem e induzirem oscilação."
+        ],
+        [
+          "Qual relação organiza o estudo de controle avançado de processos?",
+          "Modelo discreto: x(k+1)=Ax(k)+Bu(k); y(k)=Cx(k)"
+        ],
+        [
+          "Como aplicar controle avançado de processos em um exemplo?",
+          "Uma malha de temperatura tem atraso de 4 min e constante de tempo de 10 min. Ignorar o atraso em uma sintonia agressiva pode produzir oscilações; uma estratégia preditiva considera o atraso conhecido e as limitações do atuador."
+        ],
+        [
+          "O que considerar ao interpretar controle avançado de processos?",
+          "Uma estratégia de controle não substitui intertravamentos independentes de segurança. Nunca trate a otimização de setpoints como barreira de proteção."
+        ]
+      ]
+    },
+    {
+      "area": "Operações e transformações",
+      "title": "Instrumentação e Metrologia Industrial",
+      "lead": "Temperatura, pressão, nível e vazão podem ser medidos por princípios distintos, cada qual com faixa, sensibilidade, tempo de resposta e limitações. Termopares exigem compensação adequada de junção de referência e instrumentos diferenciais de pressão precisam considerar densidade e instalação. A escolha do sensor deve considerar fluido, temperatura, corrosividade e condições de manutenção.",
+      "paragraphs": [
+        "Calibrar envolve comparar indicações com referências rastreáveis e documentar desvios na faixa de interesse. Precisão, exatidão, repetibilidade, resolução e histerese representam propriedades diferentes. Sinais de 4–20 mA permitem escalonar valores de processo, mas diagnósticos e comportamento fora da faixa dependem do transmissor. Incerteza combinada não é eliminada pelo simples arredondamento do display.",
+        "A saída de 4–20 mA é relacionada linearmente à faixa de processo somente quando o transmissor está calibrado e configurado com aquela escala. A medição ainda possui histerese, deriva, tempo de resposta e influência da montagem. Uma leitura dentro da faixa não demonstra precisão; é preciso comparar com referência rastreável e conferir condições da tomada.",
+        "Medições de pressão por tomadas mal posicionadas podem sofrer erro hidrostático ou acúmulo de condensado; sensores de temperatura podem sofrer condução pelo poço e insuficiência de imersão. Controle de processo e sistema de segurança instrumentado são funções diferentes. Ao especificar, registre condições de fluido, faixa, compatibilidade e critérios de manutenção."
+      ],
+      "formula": "x = LRV + (I−4mA)/16mA × (URV−LRV)",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Um transmissor de pressão ajustado de 0 a 10 bar fornece 12 mA. O valor indicado idealmente é 0+(12−4)/16×10=5 bar, antes de correções de calibração e incerteza.",
+      "pitfall": "Leitura dentro de uma faixa não comprova calibração. Distinga erro de instrumento, erro de instalação e perturbação de processo.",
+      "cards": [
+        [
+          "Por que o sinal 4 mA pode ser vantajoso em relação a 0 mA em uma malha de corrente?",
+          "Porque permite alimentação e diagnósticos de certas falhas, dependendo do sistema."
+        ],
+        [
+          "Um sensor 4–20 mA representa 0 a 400 kPa e transmite 8 mA. Qual valor ideal?",
+          "(8−4)/16=0,25 da faixa; a leitura corresponde a 100 kPa, antes de incerteza e correções."
+        ],
+        [
+          "Por que a calibração de bancada pode não refletir o erro na instalação?",
+          "Porque posicionamento, temperatura, impulso hidráulico e condições de processo introduzem efeitos não presentes no ensaio de bancada."
+        ],
+        [
+          "Qual relação organiza o estudo de instrumentação e metrologia industrial?",
+          "x = LRV + (I−4mA)/16mA × (URV−LRV)"
+        ],
+        [
+          "Como aplicar instrumentação e metrologia industrial em um exemplo?",
+          "Um transmissor de pressão ajustado de 0 a 10 bar fornece 12 mA. O valor indicado idealmente é 0+(12−4)/16×10=5 bar, antes de correções de calibração e incerteza."
+        ],
+        [
+          "O que considerar ao interpretar instrumentação e metrologia industrial?",
+          "Leitura dentro de uma faixa não comprova calibração. Distinga erro de instrumento, erro de instalação e perturbação de processo."
+        ]
+      ]
+    },
+    {
+      "area": "Projeto e sustentabilidade",
+      "title": "Ciência e Seleção de Materiais",
+      "lead": "Metais, polímeros, cerâmicas e compósitos respondem diferentemente a temperatura, solicitação mecânica e ambiente químico. Tamanho de grão, fases presentes e tratamentos podem alterar resistência e ductilidade. Para materiais de vasos e tubulações, os dados de tração a temperatura ambiente são insuficientes quando a operação envolve fluência, fadiga térmica ou ataque corrosivo. Compatibilidade com processo deve considerar composição, pressão, ciclos e possibilidades de limpeza.",
+      "paragraphs": [
+        "Corrosão, fadiga, fragilização e desgaste são mecanismos distintos de falha. Um material pode resistir ao produto principal, mas sofrer ataque por contaminantes ou reagentes de limpeza. A seleção técnica cruza desempenho, fabricação, inspeção, custo do ciclo de vida e consequências de falha. Diagramas de materiais e cartas de propriedades ajudam na triagem, mas a decisão industrial depende de códigos, ensaios e condições reais.",
+        "Um aço adequado em água pode apresentar pites em presença de cloretos ou corrosão sob tensão em ambientes específicos. A seleção exige verificar composição química, faixa térmica, tensões e possibilidade de limpeza. Dados de resistência mecânica em ar não substituem ensaios de corrosão e critérios normativos do serviço.",
+        "Em alta temperatura, materiais podem deformar progressivamente mesmo sob carga constante, fenômeno de fluência. Ciclos de aquecimento e resfriamento também produzem fadiga térmica, principalmente em conexões restritas. Projetar com tensão nominal apenas pode mascarar deformações localizadas; avalie vida útil, inspeção, soldabilidade e margens conforme norma aplicável."
+      ],
+      "formula": "σ = F/A; ε = ΔL/L0; E ≈ σ/ε na região elástica linear",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Um corpo de prova com área inicial de 50 mm² submetido a 10 kN apresenta tensão nominal de 200 MPa. Isso não determina se o material é seguro em projeto sem comparar com propriedades aplicáveis e fatores de projeto.",
+      "pitfall": "Não confunda resistência última, tensão de escoamento e tensão admissível. A resistência a corrosão é dependente do meio e da temperatura.",
+      "cards": [
+        [
+          "Por que um material aprovado em um meio pode falhar em outro?",
+          "Porque mecanismo e intensidade de degradação dependem de composição, temperatura, contaminantes e condições de operação."
+        ],
+        [
+          "Uma barra com A=80 mm² recebe F=16 kN. Qual tensão nominal?",
+          "σ=16000/(80×10⁻⁶)=200 MPa. Isso não significa operação admissível sem conhecer material, temperatura, mecanismo de falha e fatores normativos."
+        ],
+        [
+          "Por que resistência à tração elevada não garante resistência à corrosão?",
+          "A resistência mecânica e a resistência química dependem de mecanismos distintos e das condições do ambiente."
+        ],
+        [
+          "Qual relação organiza o estudo de ciência e seleção de materiais?",
+          "σ = F/A; ε = ΔL/L0; E ≈ σ/ε na região elástica linear"
+        ],
+        [
+          "Como aplicar ciência e seleção de materiais em um exemplo?",
+          "Um corpo de prova com área inicial de 50 mm² submetido a 10 kN apresenta tensão nominal de 200 MPa. Isso não determina se o material é seguro em projeto sem comparar com propriedades aplicáveis e fatores de projeto."
+        ],
+        [
+          "O que considerar ao interpretar ciência e seleção de materiais?",
+          "Não confunda resistência última, tensão de escoamento e tensão admissível. A resistência a corrosão é dependente do meio e da temperatura."
+        ]
+      ]
+    },
+    {
+      "area": "Projeto e sustentabilidade",
+      "title": "Engenharia de Polímeros",
+      "lead": "Polímeros diferem por massa molar, distribuição de massas, ramificação, cristalinidade e composição. Essas características alteram viscosidade do fundido, resistência, temperatura de transição vítrea e comportamento mecânico. Materiais termoplásticos e termofixos respondem de modos distintos ao aquecimento e à reciclagem. O processamento deve considerar estabilidade térmica, degradação e eventual presença de plastificantes ou aditivos.",
+      "paragraphs": [
+        "Polimerização em cadeia e em etapas têm mecanismos e relações cinéticas diferentes. Em reações de crescimento por etapas idealizadas, obter massas molares elevadas exige conversões muito altas e balanço estequiométrico apropriado. Extrusão e injeção envolvem transporte viscoso e térmico; o comportamento não newtoniano pode tornar inadequado dimensionar equipamentos com viscosidade constante.",
+        "A massa molar média e sua distribuição influenciam viscosidade de fundido, processabilidade e propriedades mecânicas. Para crescimento por etapas ideal, obter cadeias longas requer conversão alta dos grupos reativos, porém desvios de estequiometria e funcionalidade alteram a relação. A cristalinidade varia com arquitetura e histórico térmico.",
+        "Polímeros fundidos frequentemente são não newtonianos: viscosidade aparente muda com taxa de cisalhamento e temperatura. Dimensionar extrusão como escoamento newtoniano pode errar pressão e potência. A degradação térmica ou por cisalhamento afeta cor, massa molar e desempenho, exigindo controle de residência, temperatura e atmosfera."
+      ],
+      "formula": "Xn = 1/(1−p) na policondensação ideal com estequiometria equimolar",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Se p=0,98 em um sistema ideal de crescimento por etapas, o grau de polimerização numérico é Xn=50. Esse resultado não se aplica diretamente a sistemas com desbalanceamento, reações laterais ou funcionalidade diferente.",
+      "pitfall": "Maior massa molar não garante melhora de todas as propriedades. Dispersidade, processamento e morfologia devem ser avaliados em conjunto.",
+      "cards": [
+        [
+          "Por que a conversão precisa ser alta para obter cadeias longas no crescimento por etapas ideal?",
+          "Porque o comprimento médio aumenta muito apenas quando a maioria dos grupos reativos já reagiu."
+        ],
+        [
+          "Em reação por etapas ideal equimolar com p=0,95, qual Xn?",
+          "Xn=1/(1−0,95)=20. A equação ideal não representa diretamente polimerização em cadeia nem sistemas com desequilíbrio estequiométrico."
+        ],
+        [
+          "Por que um polímero pode ter mesma massa molar média mas escoar diferentemente?",
+          "Distribuição de massas molares, ramificação, temperatura e microestrutura alteram comportamento reológico."
+        ],
+        [
+          "Qual relação organiza o estudo de engenharia de polímeros?",
+          "Xn = 1/(1−p) na policondensação ideal com estequiometria equimolar"
+        ],
+        [
+          "Como aplicar engenharia de polímeros em um exemplo?",
+          "Se p=0,98 em um sistema ideal de crescimento por etapas, o grau de polimerização numérico é Xn=50. Esse resultado não se aplica diretamente a sistemas com desbalanceamento, reações laterais ou funcionalidade diferente."
+        ],
+        [
+          "O que considerar ao interpretar engenharia de polímeros?",
+          "Maior massa molar não garante melhora de todas as propriedades. Dispersidade, processamento e morfologia devem ser avaliados em conjunto."
+        ]
+      ]
+    },
+    {
+      "area": "Projeto e sustentabilidade",
+      "title": "Processos Eletroquímicos",
+      "lead": "O potencial de eletrodo relaciona-se ao estado termodinâmico de uma semirreação, enquanto a corrente mede a taxa de transferência de carga. Uma tensão de célula real inclui contribuições de equilíbrio, sobrepotenciais cinéticos e perdas ôhmicas. Equação de Nernst exige definição correta do quociente de reação e atividades; usar concentração sem justificativa de idealidade pode introduzir desvios.",
+      "paragraphs": [
+        "As leis de Faraday permitem estimar quantidade teórica de produto a partir de carga elétrica e número de elétrons por mol. Reações laterais podem reduzir eficiência de corrente, e condições de transferência de massa limitam a densidade de corrente sustentada. No scale-up, geometria de eletrodos, distribuição de potencial, formação de gás, temperatura e transporte de eletrólito afetam consumo energético e segurança.",
+        "A equação de Nernst fornece potencial termodinâmico relacionado a atividade de espécies; a tensão aplicada real incorpora perdas ôhmicas e sobrepotenciais eletroquímicos. Alterar concentração, temperatura ou estado de superfície pode mudar os três efeitos. Medir corrente não fornece diretamente seletividade da reação desejada.",
+        "Em eletrodeposição e eletrólise, reagentes são consumidos perto da superfície. Uma corrente muito alta pode atingir regime limitado por transporte de massa, alterar morfologia do depósito ou favorecer reações paralelas. A eficiência de corrente converte a carga total na carga efetivamente associada ao produto desejado; dimensionamento também exige dissipação térmica e controle de gases."
+      ],
+      "formula": "nproduto = Q/(zF); Q=It; F≈96485 C/mol",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Uma eletrólise ideal passa corrente de 10 A por 9648,5 s. A carga é 96485 C, equivalente a 1 mol de elétrons. Para produto que exige 2 elétrons por mol, formam-se teoricamente 0,5 mol com eficiência de corrente de 100%.",
+      "pitfall": "Potencial termodinâmico não é tensão elétrica efetivamente necessária no equipamento; sobrepotenciais e resistência precisam ser considerados.",
+      "cards": [
+        [
+          "Como a eficiência de corrente altera a produção prevista por Faraday?",
+          "Multiplica a quantidade teórica pela fração de corrente destinada à reação de interesse."
+        ],
+        [
+          "Uma célula opera a 5 A por 1930 s. Quantos mols de elétrons passam?",
+          "Q=9650 C e n_e≈9650/96485≈0,100 mol. Para reação com 2 elétrons por mol de produto, a produção máxima ideal seria 0,050 mol."
+        ],
+        [
+          "Por que a massa depositada pode ser menor que a previsão de Faraday?",
+          "Parte da corrente pode alimentar reações paralelas, ou o depósito pode sofrer perdas mecânicas e químicas."
+        ],
+        [
+          "Qual relação organiza o estudo de processos eletroquímicos?",
+          "nproduto = Q/(zF); Q=It; F≈96485 C/mol"
+        ],
+        [
+          "Como aplicar processos eletroquímicos em um exemplo?",
+          "Uma eletrólise ideal passa corrente de 10 A por 9648,5 s. A carga é 96485 C, equivalente a 1 mol de elétrons. Para produto que exige 2 elétrons por mol, formam-se teoricamente 0,5 mol com eficiência de corrente de 100%."
+        ],
+        [
+          "O que considerar ao interpretar processos eletroquímicos?",
+          "Potencial termodinâmico não é tensão elétrica efetivamente necessária no equipamento; sobrepotenciais e resistência precisam ser considerados."
+        ]
+      ]
+    },
+    {
+      "area": "Bioprocessos e ambiente",
+      "title": "Engenharia de Fermentação e Biorreatores",
+      "lead": "Culturas em batelada passam por fases de adaptação, crescimento e limitação, dependendo do microrganismo e do meio. A equação de Monod aproxima a influência de substrato limitante, mas não inclui automaticamente inibição por produto, mortalidade ou consumo de manutenção. Balanços de substrato, biomassa e produto devem considerar rendimento observado e possíveis vias metabólicas paralelas.",
+      "paragraphs": [
+        "Em fermentação aeróbia, o suprimento de oxigênio pode se tornar limitante antes da disponibilidade de substrato. A taxa de transferência volumétrica é descrita aproximadamente por kLa(C*−CL), onde kLa depende de agitação, aeração, propriedades do caldo e geometria. Aumentar a escala preservando somente rpm não mantém o mesmo ambiente hidrodinâmico; cisalhamento, transferência térmica e esterilidade também precisam ser avaliados.",
+        "Em operação alimentada, o volume varia no tempo e concentração não segue o mesmo balanço de batelada com volume fixo. O projeto precisa separar massa de substrato alimentada, consumo pela biomassa e diluição por aumento do volume. Alimentações muito rápidas podem levar a acúmulo de substrato, inibição e produção de subprodutos indesejados.",
+        "O cultivo aeróbio transforma substrato em biomassa, produtos, CO₂ e energia térmica. A capacidade de troca térmica e a taxa de transferência de oxigênio devem acompanhar a demanda celular; preservar apenas a rotação do agitador não mantém kLa nem cisalhamento ao mudar escala. Limites de esterilidade e formação de espuma também precisam ser estudados."
+      ],
+      "formula": "OTR = kLa(C*−CL); D=Q/V em cultivo contínuo",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Se kLa=100 h⁻¹ e (C*−CL)=0,002 g/L, a taxa de transferência de oxigênio estimada é 0,20 g/(L·h). O cultivo permanecerá limitado se a demanda celular exceder essa oferta.",
+      "pitfall": "Uma taxa de aeração maior não implica automaticamente maior taxa de transferência, pois tamanho de bolhas, viscosidade e regime hidrodinâmico afetam kLa.",
+      "cards": [
+        [
+          "Quando ocorre limitação de oxigênio em um cultivo aeróbio?",
+          "Quando a demanda de oxigênio das células ultrapassa a capacidade efetiva de transferência ao meio."
+        ],
+        [
+          "Se kLa=120 h⁻¹ e C*−CL=0,0015 g/L, qual OTR?",
+          "OTR=120×0,0015=0,18 g/(L·h), sob aproximação de mistura uniforme e parâmetros válidos."
+        ],
+        [
+          "Por que D=μ em cultivo contínuo não vale diretamente para qualquer operação?",
+          "A igualdade resulta de balanço em regime permanente com biomassa não nula, sem retenção celular e hipóteses adicionais; fed-batch e batelada não satisfazem essas condições."
+        ],
+        [
+          "Qual relação organiza o estudo de engenharia de fermentação e biorreatores?",
+          "OTR = kLa(C*−CL); D=Q/V em cultivo contínuo"
+        ],
+        [
+          "Como aplicar engenharia de fermentação e biorreatores em um exemplo?",
+          "Se kLa=100 h⁻¹ e (C*−CL)=0,002 g/L, a taxa de transferência de oxigênio estimada é 0,20 g/(L·h). O cultivo permanecerá limitado se a demanda celular exceder essa oferta."
+        ],
+        [
+          "O que considerar ao interpretar engenharia de fermentação e biorreatores?",
+          "Uma taxa de aeração maior não implica automaticamente maior taxa de transferência, pois tamanho de bolhas, viscosidade e regime hidrodinâmico afetam kLa."
+        ]
+      ]
+    },
+    {
+      "area": "Bioprocessos e ambiente",
+      "title": "Tratamento de Água e Efluentes",
+      "lead": "Concentração e vazão definem carga poluente; uma amostra pontual não descreve necessariamente a variabilidade de um efluente industrial. DBO, DQO, sólidos suspensos, nitrogênio e fósforo respondem a mecanismos de remoção diferentes. A eficiência calculada a partir de concentrações só equivale à eficiência mássica quando vazões de entrada e saída são adequadamente tratadas. Recirculações e lodo exigem fronteiras de balanço bem definidas.",
+      "paragraphs": [
+        "Coagulação e floculação agregam partículas e dependem de dose, pH e mistura; sedimentação e filtração removem frações separáveis. Processos biológicos transformam compostos biodegradáveis, mas podem sofrer inibição por substâncias tóxicas, salinidade ou cargas variáveis. Selecionar tratamento exige estudo de tratabilidade e atendimento a requisitos locais de lançamento e reuso, não apenas alcançar uma porcentagem arbitrária de remoção.",
+        "Eficiências de remoção em operações consecutivas devem ser multiplicadas como frações remanescentes, não somadas diretamente. A corrente que sai de uma etapa alimenta a seguinte e pode ter vazão alterada por recirculação, lodo ou evaporação. Estime carga por massa e tempo, registrando vazão e concentração ao longo do processo.",
+        "Biodegradação pode ser inibida por choque tóxico, variação brusca de pH, falta de nutrientes ou excesso de carga. Tempo de residência hidráulico e idade do lodo influenciam resposta. Remover DQO não garante remover nitrogênio, fósforo ou metais; cada categoria exige mecanismo e monitoramento próprios."
+      ],
+      "formula": "Carga (kg/d) = Q(m³/d) × C(mg/L) × 0,001",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Para vazão de 250 m³/d e DQO de 400 mg/L, a carga é 100 kg/d. Se na saída Q=250 m³/d e DQO=100 mg/L, a carga passa a 25 kg/d, correspondendo a 75% de remoção mássica de DQO.",
+      "pitfall": "Remoção de concentração por diluição não significa transformação de massa do contaminante. Verifique alterações de vazão ao comparar cargas.",
+      "cards": [
+        [
+          "Por que vazão é indispensável para quantificar a remoção de carga?",
+          "Porque carga é quantidade de poluente por unidade de tempo, obtida por concentração vezes vazão."
+        ],
+        [
+          "Uma primeira unidade remove 50% da carga e a segunda remove 60% do restante. Qual remoção total?",
+          "A fração restante é 0,5×0,4=0,2; a remoção global é 80%, e não 110%. Considere a mesma base de carga e fronteiras definidas."
+        ],
+        [
+          "Por que comparar somente percentuais não revela o efeito total de tratamento?",
+          "Porque a porcentagem se aplica à carga que entra em cada etapa, que muda após as operações anteriores."
+        ],
+        [
+          "Qual relação organiza o estudo de tratamento de água e efluentes?",
+          "Carga (kg/d) = Q(m³/d) × C(mg/L) × 0,001"
+        ],
+        [
+          "Como aplicar tratamento de água e efluentes em um exemplo?",
+          "Para vazão de 250 m³/d e DQO de 400 mg/L, a carga é 100 kg/d. Se na saída Q=250 m³/d e DQO=100 mg/L, a carga passa a 25 kg/d, correspondendo a 75% de remoção mássica de DQO."
+        ],
+        [
+          "O que considerar ao interpretar tratamento de água e efluentes?",
+          "Remoção de concentração por diluição não significa transformação de massa do contaminante. Verifique alterações de vazão ao comparar cargas."
+        ]
+      ]
+    },
+    {
+      "area": "Projeto e sustentabilidade",
+      "title": "Integração Energética e Análise Pinch",
+      "lead": "A análise pinch organiza correntes quentes e frias conforme cargas térmicas e intervalos de temperatura, fornecendo estimativas de necessidades mínimas de aquecimento e resfriamento sob ΔTmin escolhido. A diferença mínima de temperatura representa compromisso entre recuperação energética e investimento em área de troca. Uma rede que cruza o pinch indevidamente pode aumentar simultaneamente consumo de utilidades quentes e frias.",
+      "paragraphs": [
+        "Uma rede de trocadores não é determinada apenas pelos alvos energéticos. Número de equipamentos, queda de pressão, incrustação, controle e partidas influenciam sua operação. Economia de energia deve ser comparada com custo anualizado de investimento e utilidades. Em correntes sujeitas a variação, projeto muito próximo do alvo teórico pode reduzir robustez de controle e capacidade de limpeza.",
+        "A diferença mínima de temperatura impõe limite de aproximação entre correntes quentes e frias. ΔTmin menor favorece recuperação energética, mas exige maior área de troca e pode elevar complexidade da rede. As curvas compostas fornecem metas para aquecimento e resfriamento mínimo; não definem sozinhas a rede final de equipamentos.",
+        "Uma rede de trocadores eficiente em regime nominal pode ser sensível à variação de alimentação, incrustação e necessidades de partida. Avalie hidráulica, manutenção, controle e temperatura dos produtos além da energia recuperada. A estimativa econômica precisa comparar CAPEX adicional com economia de utilidades e riscos operacionais."
+      ],
+      "formula": "Q = ṁ cp ΔT; aproximação ΔTmin delimita troca economicamente considerada",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Uma corrente quente de 2 kg/s com cp=3 kJ/(kg·K) esfria 40 K e disponibiliza 240 kW. Uma corrente fria precisa de 180 kW no intervalo termicamente compatível; a energia potencial é suficiente, mas a viabilidade depende do perfil de temperaturas e do ΔTmin.",
+      "pitfall": "Potências totais compatíveis não demonstram possibilidade de troca térmica: é necessário verificar força motriz em toda a área de troca.",
+      "cards": [
+        [
+          "O que representa o ΔTmin no método pinch?",
+          "A diferença mínima admissível entre correntes quentes e frias, usada para estabelecer metas de recuperação de calor."
+        ],
+        [
+          "Uma corrente com ṁ=4 kg/s, cp=2 kJ/(kg·K), resfria 30 K. Quanto calor cede?",
+          "Q̇=4×2×30=240 kW, sem mudança de fase e com cp constante. A recuperação efetiva depende da força motriz frente às correntes frias."
+        ],
+        [
+          "Por que duas correntes com cargas compatíveis podem não trocar todo o calor disponível?",
+          "O perfil de temperaturas pode violar ΔTmin em parte do percurso, inviabilizando a troca desejada."
+        ],
+        [
+          "Qual relação organiza o estudo de integração energética e análise pinch?",
+          "Q = ṁ cp ΔT; aproximação ΔTmin delimita troca economicamente considerada"
+        ],
+        [
+          "Como aplicar integração energética e análise pinch em um exemplo?",
+          "Uma corrente quente de 2 kg/s com cp=3 kJ/(kg·K) esfria 40 K e disponibiliza 240 kW. Uma corrente fria precisa de 180 kW no intervalo termicamente compatível; a energia potencial é suficiente, mas a viabilidade depende do perfil de temperaturas e do ΔTmin."
+        ],
+        [
+          "O que considerar ao interpretar integração energética e análise pinch?",
+          "Potências totais compatíveis não demonstram possibilidade de troca térmica: é necessário verificar força motriz em toda a área de troca."
+        ]
+      ]
+    },
+    {
+      "area": "Projeto e sustentabilidade",
+      "title": "Dimensionamento de Equipamentos",
+      "lead": "Um equipamento só pode ser dimensionado após definir capacidade, fluidos, composição, pressão, temperatura, regime, materiais e margens justificadas. Dimensionamento hidráulico, térmico e mecânico respondem a restrições distintas. Selecionar uma bomba pela vazão sem curva do sistema, NPSH disponível e perdas pode gerar cavitação ou operação fora da faixa adequada. Normas de projeto se aplicam segundo uso, categoria e jurisdição.",
+      "paragraphs": [
+        "O aumento de escala pode alterar mistura, transferência térmica, distribuição de fases e regime de escoamento, mesmo quando a geometria é similar. Requisitos de inspeção, manutenção, limpeza, instrumentação e contenção devem ser considerados desde o início. Um cálculo de área de trocador não substitui verificação de hidráulica, incrustação, vibração e restrições de fabricação.",
+        "A área pelo método LMTD exige carga térmica, coeficiente global na mesma base e diferença média com correção de arranjo. Uma seleção preliminar deve prosseguir com queda de pressão, velocidade, risco de vibração e incrustação. Em fluidos com mudança de fase ou propriedades muito variáveis, um único U médio pode ser insuficiente.",
+        "A seleção de bomba não depende só de vazão e altura manométrica. Uma condição de sucção quente ou de tanque baixo pode reduzir NPSH disponível e aumentar risco de cavitação. Materiais, fluido, viscosidade, operação parcial, curva de eficiência e potência do acionamento completam avaliação de projeto."
+      ],
+      "formula": "A ≈ Q/(U F ΔTml) quando o método LMTD é aplicável",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Um trocador com Q=300 kW, U=600 W/(m²·K), fator F=1 e ΔTml=25 K exige estimativa de área A=300000/(600×25)=20 m², antes de margens e verificações hidráulicas.",
+      "pitfall": "Uma margem arbitrária elevada não compensa hipóteses erradas. Separe margem de projeto, incerteza e condições reais de operação.",
+      "cards": [
+        [
+          "Por que uma área térmica calculada não encerra o dimensionamento de trocador?",
+          "Porque perdas de pressão, escoamento, incrustação, vibração e fabricação também restringem o projeto."
+        ],
+        [
+          "Um trocador requer Q=450 kW, U=750 W/(m²·K) e ΔTml=30 K, F=1. Qual área?",
+          "A=450000/(750×30)=20 m² antes de incrustação adicional e verificações térmicas e hidráulicas."
+        ],
+        [
+          "Por que NPSH disponível não é uma propriedade fixa apenas da bomba?",
+          "Porque depende da pressão de sucção, coluna estática, temperatura, pressão de vapor e perdas no sistema de sucção."
+        ],
+        [
+          "Qual relação organiza o estudo de dimensionamento de equipamentos?",
+          "A ≈ Q/(U F ΔTml) quando o método LMTD é aplicável"
+        ],
+        [
+          "Como aplicar dimensionamento de equipamentos em um exemplo?",
+          "Um trocador com Q=300 kW, U=600 W/(m²·K), fator F=1 e ΔTml=25 K exige estimativa de área A=300000/(600×25)=20 m², antes de margens e verificações hidráulicas."
+        ],
+        [
+          "O que considerar ao interpretar dimensionamento de equipamentos?",
+          "Uma margem arbitrária elevada não compensa hipóteses erradas. Separe margem de projeto, incerteza e condições reais de operação."
+        ]
+      ]
+    },
+    {
+      "area": "Projeto e sustentabilidade",
+      "title": "Segurança de Processos Industriais",
+      "lead": "Segurança de processos trata eventos como perda de contenção, incêndio, explosão e reação descontrolada, além de lesões ocupacionais rotineiras. Um HAZOP utiliza palavras-guia e desvios em nós de processo para examinar causas, consequências, salvaguardas e recomendações. A qualidade da análise depende de P&IDs atualizados, propriedades das substâncias, dados operacionais e equipe multidisciplinar.",
+      "paragraphs": [
+        "A abordagem de camadas de proteção exige avaliar independência, confiabilidade e adequação de medidas. Alarme com resposta operacional não deve ser considerado automaticamente equivalente a sistema instrumentado de segurança. Válvulas de alívio e sistemas de contenção têm funções específicas, sujeitos a critérios de dimensionamento e manutenção. Mudanças de processo exigem revisão formal de riscos antes da implantação.",
+        "Em um HAZOP, palavras-guia como mais, menos e reverso estruturam a discussão dos desvios em cada nó de processo. Para cada desvio, avaliam-se causas, consequências, salvaguardas existentes e ações. O P&ID precisa refletir o equipamento real; uma recomendação sem responsável, prazo e rastreabilidade tende a não produzir controle efetivo.",
+        "Uma mesma fonte de alimentação elétrica ou sensor compartilhado pode comprometer independência de barreiras aparentemente distintas. Análises de camada de proteção precisam examinar confiabilidade, resposta operacional, manutenção e falhas comuns. Um alarme pode apoiar intervenção, mas não substitui automaticamente sistema instrumentado de segurança ou alívio dimensionado."
+      ],
+      "formula": "Risco qualitativo considera frequência e consequência; redução exige barreiras efetivas",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Em um tanque que recebe alimentação contínua, um HAZOP com desvio 'nível alto' investiga falha de controle, alimentação excessiva e saída bloqueada; avalia extravasamento, alarmes, intertravamentos e requisitos de contenção. Não atribui redução numérica de risco sem dados justificáveis.",
+      "pitfall": "Uma sugestão genérica de alarme não comprova independência de proteção. Não substitua estudos técnicos e normas aplicáveis por uma matriz simplificada.",
+      "cards": [
+        [
+          "Qual é o propósito de examinar desvios em um HAZOP?",
+          "Identificar causas, consequências e salvaguardas de condições de processo diferentes das pretendidas."
+        ],
+        [
+          "Um tanque continua recebendo produto com válvula de saída fechada. Qual desvio iniciar num HAZOP?",
+          "Avaliar 'nível alto' e possível sobreenchimento; investigar bloqueio, falha de nível, transbordamento, proteção independente e destinos da descarga. Não atribuir frequências inventadas."
+        ],
+        [
+          "Por que uma única medição compartilhada por controle e proteção pode enfraquecer independência?",
+          "Porque a falha do sensor pode comprometer simultaneamente as duas funções, constituindo uma causa comum."
+        ],
+        [
+          "Qual relação organiza o estudo de segurança de processos industriais?",
+          "Risco qualitativo considera frequência e consequência; redução exige barreiras efetivas"
+        ],
+        [
+          "Como aplicar segurança de processos industriais em um exemplo?",
+          "Em um tanque que recebe alimentação contínua, um HAZOP com desvio 'nível alto' investiga falha de controle, alimentação excessiva e saída bloqueada; avalia extravasamento, alarmes, intertravamentos e requisitos de contenção. Não atribui redução numérica de risco sem dados justificáveis."
+        ],
+        [
+          "O que considerar ao interpretar segurança de processos industriais?",
+          "Uma sugestão genérica de alarme não comprova independência de proteção. Não substitua estudos técnicos e normas aplicáveis por uma matriz simplificada."
+        ]
+      ]
+    },
+    {
+      "area": "Projeto e sustentabilidade",
+      "title": "Qualidade e Controle Estatístico de Processos",
+      "lead": "Cartas de controle monitoram estabilidade estatística ao longo do tempo, comparando estatísticas amostrais com limites calculados segundo um modelo de variação. Limites de controle não são limites de especificação; um processo pode estar estável e ainda produzir fora de especificação. Padrões de tendência, mudança e sequência exigem investigação, não apenas pontos isolados além dos limites.",
+      "paragraphs": [
+        "Índices Cp e Cpk comparam dispersão do processo e posição da média com os limites de especificação, sob hipóteses de estabilidade e distribuição aplicáveis. Uma capacidade aparente alta pode ser ilusória com sistema de medição ruim, autocorrelação ou dados não representativos. Estudos de repetibilidade e reprodutibilidade avaliam o sistema de medição antes de atribuir desvios ao processo.",
+        "Limites de controle são derivados da variação estatística observada; especificações representam exigência de qualidade. Uma produção pode estar estável, porém centrada fora da especificação. Estime capacidade apenas quando houver evidência de estabilidade e sistema de medição apropriado. Investigue autocorrelação e mudanças entre lotes antes de assumir distribuição estável.",
+        "Uma carta com ponto além de limites ou longa sequência de um lado sugere investigação de causa especial. Mas alarmes frequentes por erro de sensor ou subgrupo inadequado prejudicam decisões. Estudos de repetibilidade e reprodutibilidade ajudam a separar variabilidade do produto da variabilidade do instrumento."
+      ],
+      "formula": "Cp=(USL−LSL)/(6σ); Cpk=min[(USL−μ)/(3σ),(μ−LSL)/(3σ)]",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Para especificação 90–110, média 100 e σ=2, Cp=20/12≈1,67 e Cpk≈1,67. O cálculo assume distribuição apropriada e processo sob controle; isoladamente não prova conformidade futura.",
+      "pitfall": "Evite comparar Cp de um processo instável como se representasse capacidade contínua. Diferencie limites estatísticos de especificações contratuais.",
+      "cards": [
+        [
+          "Qual é a diferença entre limite de controle e limite de especificação?",
+          "O primeiro vem do comportamento estatístico observado do processo; o segundo expressa requisito de produto ou desempenho."
+        ],
+        [
+          "Para limites 90–110, média 104 e σ=2, quais Cp e Cpk?",
+          "Cp=(110−90)/(6×2)=1,667; Cpk=min[(110−104)/6,(104−90)/6]=1,0. A média deslocada diminui capacidade efetiva em relação a Cp."
+        ],
+        [
+          "Por que Cp e Cpk podem ser muito diferentes?",
+          "Porque Cp considera largura da dispersão, enquanto Cpk também penaliza deslocamento da média para um dos limites."
+        ],
+        [
+          "Qual relação organiza o estudo de qualidade e controle estatístico de processos?",
+          "Cp=(USL−LSL)/(6σ); Cpk=min[(USL−μ)/(3σ),(μ−LSL)/(3σ)]"
+        ],
+        [
+          "Como aplicar qualidade e controle estatístico de processos em um exemplo?",
+          "Para especificação 90–110, média 100 e σ=2, Cp=20/12≈1,67 e Cpk≈1,67. O cálculo assume distribuição apropriada e processo sob controle; isoladamente não prova conformidade futura."
+        ],
+        [
+          "O que considerar ao interpretar qualidade e controle estatístico de processos?",
+          "Evite comparar Cp de um processo instável como se representasse capacidade contínua. Diferencie limites estatísticos de especificações contratuais."
+        ]
+      ]
+    },
+    {
+      "area": "Projeto e sustentabilidade",
+      "title": "Engenharia Econômica e Viabilidade",
+      "lead": "CAPEX inclui ativos e implantação conforme escopo declarado, enquanto OPEX envolve recursos operacionais recorrentes. Estimativas preliminares dependem fortemente de data-base, moeda, capacidade, materiais, localização e fatores de instalação. Multiplicar apenas o custo de aquisição de equipamentos sem explicitar escopo pode subestimar obra civil, utilidades, instrumentação e contingências.",
+      "paragraphs": [
+        "Valor presente líquido desconta fluxos futuros com taxa apropriada às premissas e ao risco. Taxa interna de retorno é raiz do VPL e pode apresentar múltiplos valores em perfis de fluxo de caixa não convencionais. Payback simples ignora desconto e fluxos após recuperação. Sensibilidade a preço, conversão, disponibilidade, utilidades e investimento ajuda a identificar quais premissas merecem maior atenção.",
+        "O VPL converte fluxos de caixa em valor presente usando taxa coerente com moeda, inflação e risco. Misturar fluxos nominais com taxa real prejudica o resultado. Investimentos e despesas precisam ser atribuídos às datas corretas, incluindo períodos sem receita durante implantação. Payback não incorpora todos os fluxos e deve ser auxiliar, não único critério.",
+        "Estimativas preliminares de capital devem explicitar equipamentos, instalação, construção, instrumentação, utilidades e contingências. Custos operacionais incluem matérias-primas, mão de obra, energia e manutenção conforme o escopo. Sensibilidade a rendimento, disponibilidade e preço de produto mostra variáveis críticas antes de decidir seguir para projeto detalhado."
+      ],
+      "formula": "VPL = −I0 + Σ FCt/(1+i)^t",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Um projeto investe 100 unidades hoje e retorna 60 no fim de cada um de dois anos. Com i=10% a.a., VPL≈−100+60/1,1+60/1,21=4,13. O exemplo omite impostos, reinvestimentos e capital de giro.",
+      "pitfall": "Uma estimativa econômica sem ano-base e moeda não pode ser comparada diretamente com outra. VPL positivo depende da taxa adotada.",
+      "cards": [
+        [
+          "Por que o payback simples não substitui VPL?",
+          "Porque não considera corretamente o valor temporal do dinheiro nem todos os fluxos relevantes."
+        ],
+        [
+          "Um investimento de 100 paga 60 ao fim do ano 1 e 60 ao fim do ano 2; i=10%. Qual VPL?",
+          "VPL=−100+60/1,1+60/(1,1²)≈4,13 unidades monetárias. Resultado depende de taxa, horizonte e omissões do exemplo."
+        ],
+        [
+          "Por que uma queda no rendimento pode afetar VPL mais do que aumento moderado no CAPEX?",
+          "Porque rendimento influencia fluxos recorrentes de produto e custos durante muitos anos, podendo ter efeito acumulado superior ao gasto inicial."
+        ],
+        [
+          "Qual relação organiza o estudo de engenharia econômica e viabilidade?",
+          "VPL = −I0 + Σ FCt/(1+i)^t"
+        ],
+        [
+          "Como aplicar engenharia econômica e viabilidade em um exemplo?",
+          "Um projeto investe 100 unidades hoje e retorna 60 no fim de cada um de dois anos. Com i=10% a.a., VPL≈−100+60/1,1+60/1,21=4,13. O exemplo omite impostos, reinvestimentos e capital de giro."
+        ],
+        [
+          "O que considerar ao interpretar engenharia econômica e viabilidade?",
+          "Uma estimativa econômica sem ano-base e moeda não pode ser comparada diretamente com outra. VPL positivo depende da taxa adotada."
+        ]
+      ]
+    },
+    {
+      "area": "Projeto e sustentabilidade",
+      "title": "Modelagem e Simulação Integrada",
+      "lead": "Um fluxograma simulado associa correntes, equipamentos, propriedades termodinâmicas e especificações. O programa pode resolver o sistema matemático sem representar adequadamente uma mistura real se o pacote de propriedades ou parâmetros estiverem inadequados. Antes do ajuste de projeto, conferem-se vazões, frações, entalpias, unidades e fronteiras de reciclo, inclusive a consistência entre composição e pressão.",
+      "paragraphs": [
+        "Reciclos criam equações acopladas e podem exigir sequência de solução e critérios específicos de convergência. O resultado deve ser testado contra cálculos independentes, limites físicos e, quando possível, dados experimentais. Estudos de sensibilidade permitem investigar impacto de pressão, refluxo ou temperatura; varreduras fora do domínio do modelo não produzem evidência válida apenas por gerarem gráficos suaves.",
+        "Um simulador pode informar convergência mesmo quando um pacote de propriedades é inadequado à mistura. Confira composição e vazões de cada corrente, balanços de energia e pressão coerente com equipamentos. Trace fronteira global e compare somas de entrada e saída em bases equivalentes. Pequenos resíduos não garantem validação fora da faixa experimental.",
+        "O laço de reciclo torna interdependentes correntes e especificações, exigindo uma estratégia numérica de convergência. Se a solução muda muito ao alterar chute inicial, examine múltiplos regimes ou problemas de modelo. Sensibilidade a parâmetros de equilíbrio, refluxo, pressão e conversão ajuda a comunicar robustez dos resultados."
+      ],
+      "formula": "resíduo de conservação = entradas − saídas + geração − consumo",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Um misturador sem reação recebe 100 e 70 kg/h e o simulador informa 170,01 kg/h de produto. O resíduo é −0,01 kg/h; a adequação da diferença depende da tolerância escolhida e da qualidade das entradas.",
+      "pitfall": "Convergência numérica e validação física são tarefas distintas. Não omita versões de software nem modelos termodinâmicos ao documentar o caso.",
+      "cards": [
+        [
+          "Por que comparar simulação com um balanço independente?",
+          "Para identificar inconsistências de modelagem que o algoritmo de solução pode não detectar."
+        ],
+        [
+          "Uma alimentação de 100+80 kg/h entra em misturador sem reação, e a simulação mostra saída de 179,7 kg/h. Qual resíduo?",
+          "Na convenção entrada menos saída, o resíduo é 180−179,7=0,3 kg/h. A adequação depende de tolerância, dados e escala."
+        ],
+        [
+          "Por que mudar pacote termodinâmico pode alterar resultados mesmo com correntes iguais?",
+          "Porque cálculo de fugacidades, entalpias e equilíbrio muda com modelos e parâmetros, modificando propriedades e condições de separação."
+        ],
+        [
+          "Qual relação organiza o estudo de modelagem e simulação integrada?",
+          "resíduo de conservação = entradas − saídas + geração − consumo"
+        ],
+        [
+          "Como aplicar modelagem e simulação integrada em um exemplo?",
+          "Um misturador sem reação recebe 100 e 70 kg/h e o simulador informa 170,01 kg/h de produto. O resíduo é −0,01 kg/h; a adequação da diferença depende da tolerância escolhida e da qualidade das entradas."
+        ],
+        [
+          "O que considerar ao interpretar modelagem e simulação integrada?",
+          "Convergência numérica e validação física são tarefas distintas. Não omita versões de software nem modelos termodinâmicos ao documentar o caso."
+        ]
+      ]
+    },
+    {
+      "area": "Projeto e sustentabilidade",
+      "title": "Sustentabilidade e Avaliação de Ciclo de Vida",
+      "lead": "Avaliação de ciclo de vida compara sistemas em referência a uma unidade funcional, como produzir uma tonelada de material dentro de requisitos de qualidade definidos. A fronteira determina quais etapas entram no inventário: extração, produção, transporte, uso e destinação final. Comparar alternativas com fronteiras ou unidades funcionais diferentes pode levar a conclusões incorretas, mesmo com dados de emissões individuais precisos.",
+      "paragraphs": [
+        "O inventário quantifica entradas e saídas relevantes; categorias de impacto convertem inventários por fatores de caracterização consistentes com a metodologia escolhida. Processos com coprodutos exigem regra de alocação ou abordagem sistemática alternativa. Sensibilidade a fontes de dados, mix de eletricidade, rendimentos e rotas de descarte deve ser comunicada para evitar apresentar uma estimativa pontual como certeza absoluta.",
+        "Duas rotas produtivas só podem ser comparadas por unidade funcional equivalente, com mesma exigência de produto e fronteiras claramente definidas. Emissões por quilograma produzido e emissões por quilograma de produto com pureza diferente não são automaticamente comparáveis. Dados de eletricidade, transporte e matérias-primas frequentemente dominam incertezas.",
+        "Processos que fornecem mais de um produto exigem regra explícita de repartição de cargas ambientais, evitando contagem dupla ou benefícios arbitrários. Métodos de alocação econômica e física podem levar a resultados distintos. O relatório deve incluir análise de sensibilidade, qualidade de dados e limites de interpretação das categorias de impacto."
+      ],
+      "formula": "Impacto por unidade funcional = Σ fluxo_i × fator de caracterização_i",
+      "units": "Defina a base de cálculo e confira as unidades de cada variável antes de substituir valores. Explicite as hipóteses utilizadas no modelo.",
+      "example": "Se uma linha emite diretamente 120 kg CO₂e ao produzir 100 kg de produto, sua intensidade direta é 1,2 kg CO₂e/kg de produto. Isso não representa a pegada de ciclo de vida sem contabilizar as demais etapas da fronteira.",
+      "pitfall": "ACV não equivale a inventário de emissão direta isolada. Declare a unidade funcional e as limitações de dados.",
+      "cards": [
+        [
+          "Por que a unidade funcional é central em uma ACV?",
+          "Porque define o serviço ou resultado equivalente que permite comparar diferentes sistemas de produto."
+        ],
+        [
+          "Uma rota emite 400 kg CO₂e para produzir 250 kg de produto especificado. Qual intensidade calculada nessa fronteira?",
+          "400/250=1,6 kg CO₂e/kg produto, para a fronteira declarada. Isso não implica automaticamente pegada de ciclo de vida completa."
+        ],
+        [
+          "Por que a eletricidade usada na planta pode mudar a comparação entre rotas?",
+          "Porque fatores de emissão variam com origem da energia, horário, região e metodologia de inventário, alterando impactos por unidade funcional."
+        ],
+        [
+          "Qual relação organiza o estudo de sustentabilidade e avaliação de ciclo de vida?",
+          "Impacto por unidade funcional = Σ fluxo_i × fator de caracterização_i"
+        ],
+        [
+          "Como aplicar sustentabilidade e avaliação de ciclo de vida em um exemplo?",
+          "Se uma linha emite diretamente 120 kg CO₂e ao produzir 100 kg de produto, sua intensidade direta é 1,2 kg CO₂e/kg de produto. Isso não representa a pegada de ciclo de vida sem contabilizar as demais etapas da fronteira."
+        ],
+        [
+          "O que considerar ao interpretar sustentabilidade e avaliação de ciclo de vida?",
+          "ACV não equivale a inventário de emissão direta isolada. Declare a unidade funcional e as limitações de dados."
+        ]
+      ]
+    }
+  ]
+}

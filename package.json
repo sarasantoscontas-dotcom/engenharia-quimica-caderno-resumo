@@ -1,0 +1,11 @@
+{
+  "name": "engenharia-quimica-caderno-resumo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "start": "node scripts/serve.mjs",
+    "check": "node --check assets/app.js",
+    "verify": "node scripts/verify.mjs"
+  }
+}
